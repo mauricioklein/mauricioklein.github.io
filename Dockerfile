@@ -17,6 +17,11 @@ RUN gem install jekyll
 ADD . /root/jekyll
 
 #
+# Listen to port 4000
+#
+EXPOSE 4000
+
+#
 # Run Jekyll's server
 #
 WORKDIR /root/jekyll
