@@ -9,7 +9,7 @@ RUN apt-get install -y nodejs vim
 #
 # Install Jekyll
 #
-RUN gem install jekyll
+RUN gem install bundler
 
 #
 # Copy project to container
@@ -22,7 +22,12 @@ ADD . /root/jekyll
 EXPOSE 4000
 
 #
-# Run Jekyll's server
+# Install required gems
 #
 WORKDIR /root/jekyll
-CMD ["jekyll", "server"]
+RUN bundle install
+
+#
+# Run Jekyll's server
+#
+#CMD ["jekyll", "server"]

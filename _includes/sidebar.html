@@ -1,20 +1,64 @@
-<aside>
-	<div class="panel radius">
-		<h3>Sidebar</h3>
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+{% capture sidebar %}
+{% comment %}
+<!-- 
+Handler for toggling the sidebar `.sidebar-toggle-checkbox` is used for regular
+styles and `#sidebar-toggle-checkbox` for behavior. 
+-->
+{% endcomment %}
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
 
-			Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</p>
-	</div>
+<div class="sidebar" id="sidebar">
 
-  <img class="b30" src="http://dummyimage.com/303x16:9/df4949/e27b3f.png&amp;text=Ugly+Ad+Space" alt="">
+  {% if site.author_thumbnail && site.author_thumbnail != '' %}
+  <img 
+    src="{{ site.author_thumbnail | prepend: site.baseurl | prepend: site.url }}"
+    alt="{{ site.title }}" />
 
+  {% endif %}
 
-	<div class="border-dotted radius b30">
-		<img src="http://placekitten.com/271/270" alt="uh, Placekitten">
-		<p class="text-left">
-			This is an advertisment with a crazy cat! <a href="http://placekitten.com/">More cats, please!</a>
-		</p>
-	</div>
-</aside>
+  <div class="sidebar-info">
+      <p>
+        {{ site.description }}
+      </p>
+  </div>
+
+  <nav class="sidebar-nav">
+
+    <a class="sidebar-nav-item{% if page.url == '/index.html' %} active {% endif %}" 
+      href="{{ '' | prepend: site.baseurl | prepend: site.url | append: '/' }}"> 
+      Home
+    </a>
+
+    {% for item in site.data.main-nav %}
+    {% assign item_url = item.href | append:"/" %}
+    {% if item_url == page.url %}
+    {% assign c = "active" %}
+    {% else %}
+    {% assign c = "" %}
+    {% endif %}
+
+    <a class="sidebar-nav-item {{ c }}" 
+      href="{{ item.href | prepend: site.baseurl | prepend: site.url }}">
+      {{ item.title }}
+    </a>
+    {% endfor %}
+
+    <a class="sidebar-nav-item" 
+      href="http://github.com/{{ site.theme.social.github }}"
+      target="_blank">
+      GitHub
+    </a>
+
+  </nav>
+
+  <div class="sidebar-info small">
+     <p>
+       Copyright &copy; Web-Create - {{ site.time | date: '%Y' }}.
+       Powered by <a href="http://jekyllrb.com" target="_blank">Jekyll</a>
+     </p>
+  </div>
+
+  {% include social.html %}
+
+</div>
+{% endcapture %}{{ sidebar | strip_newlines }}
