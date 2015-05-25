@@ -10,13 +10,11 @@ Ola!
 
 Sou Mauricio Klein, desenvolvedor de software ha mais de 5 anos.
 
-I prefer to serve with Php and Ruby based stacks and also love to work
-on [Jekyll][jekyll] and [Processwire CMS/CMF][pw].
+Grande fa de Linux e do mundo open source, sempre estou em busca de novas tecnologias e conhecimentos, que pretendo compartilhar aqui no blog.
 
 ### Contact me
 
-Say `Hello` at [webcreatelk@gmail.com]({{ site.email }}) or find
-me on
+Voce pode me contatar atraves do meu e-mail pessoal: [mauricio.klein.msk@gmail.com]({{ site.email }}).
 
 ---
 
