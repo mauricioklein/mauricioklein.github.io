@@ -3,7 +3,9 @@ layout: default
 ---
 
 <div class="posts">
+  {% assign post_counter = 0 %}
   {% for post in paginator.posts %}
+    {% assign post_counter = post_counter | plus: 1 %}
   <article class="post">
 
     {% if post.banner_image %}
@@ -37,6 +39,12 @@ layout: default
     {{ post.excerpt }}
   </article>
   {% endfor %}
+
+  {% if post_counter == 0 %}
+    <article class="post">
+       Aguarde por novos posts!
+    </article>
+  {% endif %}
 </div>
 
 {% if paginator.total_pages > 1 %}

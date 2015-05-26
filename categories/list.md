@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Categorias
-permalink: /sections
+permalink: /categories/list/
 banner_image: sample-banner-image-2.jpg
 banner_image_alt: Categorias
 ---
