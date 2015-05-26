@@ -1,4 +1,6 @@
 - title: "Sobre mim" # Title/Caption of the menu item
   href: "/about" # the page where it pointed
+- title: "Categorias"
+  href: "/categories"
 - title: "Historico do blog"
   href: "/archive"

@@ -22,15 +22,15 @@ function getContainerId () {
 }
 
 function showUsage () {
-  echo "Usage: $0 <option>" >&2
-  echo                      >&2
-  echo "Available options:" >&2
-  echo "  build"            >&2
-  echo "  interactive"      >&2
-  echo "  noninteractive"   >&2
-  echo "  logs"             >&2
-  echo "  restart"          >&2
-  echo "  stop"             >&2
+  echo "Usage: $0 <option>"    >&2
+  echo                         >&2
+  echo "Available options:"    >&2
+  echo "  build (b)"           >&2
+  echo "  interactive (i)"     >&2
+  echo "  noninteractive (ni)" >&2
+  echo "  logs (l)"            >&2
+  echo "  restart (r)"         >&2
+  echo "  stop (s)"            >&2
 }
 
 [ $# -lt 1 ] && showUsage && exit 1;
@@ -39,29 +39,29 @@ OPTION="$1"
 
 
 case "$OPTION" in
-  "build")
+  "build"|"b")
       docker build -t ${IMAGENAME} .
       ;;
 
-  "interactive")
+  "interactive"|"i")
       docker run -p ${PORT}:${PORT} -v "${LOCALDIR}":"${CONTAINERDIR}" -it ${IMAGENAME} bash
       ;;
 
-  "noninteractive")
+  "noninteractive"|"ni")
       docker run -p ${PORT}:${PORT} -v "${LOCALDIR}":"${CONTAINERDIR}" -d ${IMAGENAME}
       ;;
 
-  "logs")
+  "logs"|"l")
       getContainerId
       docker logs -f $CONTAINERID
       ;;
 
-  "restart")
+  "restart"|"r")
       getContainerId
       docker restart $CONTAINERID
       ;;
 
-  "stop")
+  "stop"|"s")
       getContainerId
       docker stop $CONTAINERID
       ;;

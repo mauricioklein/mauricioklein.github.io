@@ -1,9 +1,8 @@
 ---
 layout: post
-title: "Installing apache2, php5 and MySQL support on Ubuntu 12.04"
-category: 
-- ubuntu
-- guide
+title: "Docker post"
+category:
+- docker
 permalink: installing-apache2-php5-and-mysql-support-on-ubuntu-12-04
 meta_description: 'Installing apache2, php5 and MySQL support on Ubuntu 12.04'
 browser_title: 'Installing apache2, php5 and MySQL support on Ubuntu 12.04'
@@ -18,7 +17,7 @@ support (mod_php) and MySQL.
 In ubuntu 12.04 there is a shortcut key to open a terminal window. Try [ctrl+alt+t] to open terminal window.
 
 <pre>
-Shortcut key for open a new terminal - [ctrl+alt+t] 
+Shortcut key for open a new terminal - [ctrl+alt+t]
 </pre>
 
 ### Step 2 - Gain root privileges
@@ -33,14 +32,14 @@ The command will ask your root password, hit enter after input your root passwor
 
 ### Step 3 - Installing MySQL 5
 
-Use following command to install MySQL. 
+Use following command to install MySQL.
 
 <pre class="terminal">
 # install mysql server along with the client
 apt-get install mysql-server mysql-client
 </pre>
 
-Install would ask you to provide a password for the MySQL root user. 
+Install would ask you to provide a password for the MySQL root user.
 
 > New password for the MySQL "root" user: < yournewpassword
 Repeat password for the MySQL "root" user: < yournewpassword
@@ -95,7 +94,7 @@ Restart you apache after install above modules.
 /etc/init.d/apache2 restart
 </pre>
 
-### Step 7 - Finaly test your php 
+### Step 7 - Finaly test your php
 
 The document root of the default web site is `/var/www`. Create a small PHP file `info.php` in that directory
  and call it in a browser. The file will display lots of useful details about our PHP installation, such as the
@@ -116,4 +115,4 @@ Here are some external links for more reference.
  - [Apache](http://httpd.apache.org/)
  - [MySQL](http://www.mysql.com/)
 
-Hope this is useful to you. 
+Hope this is useful to you.
