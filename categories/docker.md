@@ -22,6 +22,6 @@ banner_image: sample-banner-image-3.jpg
 {% endfor %}
 
 {% if post_counter == 0 %}
-  <h4>Aguarde por novos posts!</h4>
+  <h4>New posts comming soon!</h4>
 {% endif %}
 </div>

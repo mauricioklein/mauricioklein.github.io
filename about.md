@@ -1,24 +1,21 @@
 ---
 layout: page
-title: Sobre mim
+title: About me
 permalink: /about/
 banner_image: sample-banner-image-2.jpg
-banner_image_alt: Sobre mim
+banner_image_alt: About me
 ---
 
-Ola!
+Hello!
 
-Sou Mauricio Klein, desenvolvedor de software ha mais de 5 anos.
+I'm Mauricio Klein, software developer for more than 5 years.
 
-Grande fa de Linux e do mundo open source, sempre estou em busca de novas tecnologias e conhecimentos, que pretendo compartilhar aqui no blog.
+Big fan of Linux and Open Source world, I'm always searching for new technologies and knowledge, which I hope to share here.
 
-### Contacte-me
+### Contact Me
 
-Voce pode me contatar atraves do meu e-mail pessoal: [mauricio.klein.msk@gmail.com]({{ site.email }}).
+You can contact me by my personal e-mail address: [mauricio.klein.msk@gmail.com]({{site.email}})
 
 ---
 
 {% include social.html %}
-
-[pw]: http://processwire.com
-[jekyll]: http://jekyllrb.com

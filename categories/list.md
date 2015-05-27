@@ -1,21 +1,19 @@
 ---
 layout: page
-title: Categorias
+title: Categories
 permalink: /categories/list/
 banner_image: sample-banner-image-2.jpg
-banner_image_alt: Categorias
+banner_image_alt: Categories
 ---
 
 Aqui voce encontra os posts do blog separados por categoria.
 
-Clique em um dos links abaixo para acessar dicas e informacoes sobre o assunto.
+Here you can find all blog posts sorted by its category.
 
 - [Docker][docker]
-- [Java][java]
 
 ---
 
 {% include social.html %}
 
-[java]: /categories/java
 [docker]: /categories/docker

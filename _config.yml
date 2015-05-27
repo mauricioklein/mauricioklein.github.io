@@ -3,7 +3,7 @@ title: Mauricio Klein's Blog
 tagline:
 email: mauricio.klein.msk@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Desenvolvedor de Software na Zenvia Mobile Results
+  Software Developer at Zenvia Mobile Results
 # baseurl: "/blog" # the subpath of your site, e.g. /blog/
 url: "http://mauricioklein.github.io" # the base hostname & protocol for your site
 logourl: /assets/images/logo.png # Site logo
@@ -28,7 +28,7 @@ theme:
   show_author_info: true
 
   # Disqus comments manager - shortname
-  # disqus_shortname: gaya-webcreate
+  disqus_shortname: mauricio_kleins_blog
 
   # Google Analytics/Webmaster key, leave blank to ignore
   google_analytics_key:
@@ -42,6 +42,9 @@ permalink: pretty
 
 # Pagination config
 paginate: 5
+
+# Excerpt Separator
+excerpt_separator: <!-- More -->
 
 # Files/Folders to be excluded from generated _site folder
 exclude:
