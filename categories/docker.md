@@ -2,7 +2,7 @@
 layout: page
 title: Docker
 permalink: /categories/docker/
-banner_image: sample-banner-image-3.jpg
+banner_image: docker.png
 ---
 
 <div>

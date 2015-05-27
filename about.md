@@ -8,13 +8,13 @@ banner_image_alt: About me
 
 Hello!
 
-I'm Mauricio Klein, software developer for more than 5 years.
+I'm Mauricio Klein, software developer with more than 5 years of experience.
 
-Big fan of Linux and Open Source world, I'm always searching for new technologies and knowledge, which I hope to share here.
+Big fan of Linux and the Open Source world, I'm always looking for new technologies, that I'll share here.
 
 ### Contact Me
 
-You can contact me by my personal e-mail address: [mauricio.klein.msk@gmail.com]({{site.email}})
+You can reach me at social medias below or even at [my personal e-mail address]({{site.email}})
 
 ---
 

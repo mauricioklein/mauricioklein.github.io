@@ -8,7 +8,7 @@ banner_image_alt: Categories
 
 Aqui voce encontra os posts do blog separados por categoria.
 
-Here you can find all blog posts sorted by its category.
+Here you can find blog posts by its category:
 
 - [Docker][docker]
 
