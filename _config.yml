@@ -5,8 +5,8 @@ email: mauricio.klein.msk@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Software Developer at Zenvia Mobile Results
 # baseurl: "/blog" # the subpath of your site, e.g. /blog/
-url: "http://mauricioklein.github.io" 
-logourl: /assets/images/logo.png 
+url: "http://mauricioklein.github.io"
+logourl: /assets/images/logo.png
 author: "Mauricio Klein"
 author_thumbnail: "/assets/images/avatar.jpg"
 
@@ -17,6 +17,7 @@ theme:
   social:
     github: mauricioklein
     facebook: mauricioklein
+    mail: mauricio.klein.msk@gmail.com
     # gplus: +gayanvirajith
     # dribble: gayanvirajith
     # pinterest: gayanvirajith

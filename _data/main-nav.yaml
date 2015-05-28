@@ -1,6 +1,6 @@
 - title: "About Me" # Title/Caption of the menu item
   href: "/about" # the page where it pointed
 - title: "Categories"
-  href: "/categories/list"
+  href: "/categories"
 - title: "History"
   href: "/archive"
