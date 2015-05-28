@@ -13,7 +13,7 @@ However, generally, an application depends of other resources, like database, ca
 
 To solve this problem, docker provides the <i>docker-compose</i> command, that handles all system dependencies.
 
-Generally, to lift a whole environment, a simple <i>docker-compose up</i> is enough. However, sometimes, we want to run a specific command to a starting container.
+Generally, to lift an entire environment, a simple <i>docker-compose up</i> is enough. However, sometimes, we want to run a specific command in a starting container.
 
 For example:
 
