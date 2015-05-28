@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Historico do blog
+title: Archive
 permalink: /archive/
 banner_image: sample-banner-image-3.jpg
 ---
