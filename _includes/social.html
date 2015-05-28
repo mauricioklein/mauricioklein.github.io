@@ -49,14 +49,6 @@
     </li>
     {% endif %}
 
-    {% if site.theme.social.mail %}
-    <li>
-        <a title="{{ site.theme.social.mail }} on e-mail"
-            href="mailto:{{ site.theme.social.mail }}"
-            class="mail wc-img-replace" target="_blank">Email</a>
-    </li>
-    {% endif %}
-
     <li>
         <a title="Subscribe via RSS"
             href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}"
