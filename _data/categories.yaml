@@ -1,0 +1,7 @@
+- label: "Docker"
+  href: "/categories/docker/"
+  image: docker.png
+
+- label: "Life"
+  href: "/categories/life/"
+  image: life.png

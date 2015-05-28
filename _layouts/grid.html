@@ -1,37 +1,28 @@
 ---
 layout: default
 ---
-
-<!--
-  EXPECTED VARIABLES:
-    - grid_image: docker.png
-    - grid_link: /categories/docker
-    - grid_text: Docker
--->
-
-<!--<div class="post">-->
-
-  <!--
-  {% if page.banner_image %}
-  <div class="banner-image">
-    <img 
-        src="{{ "/assets/images/" | append: page.banner_image | prepend: site.baseurl | prepend: site.url }}" 
-        alt="{{ page.banner_image_alt }}">
-  </div>
-  {% endif %}
-  -->
+<div class="post">
 
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
   </header>
 
   <article class="post-content">
+    {% for item in site.data.categories %}
+    {% assign item_url = item.href | append:"/" %}
+    {% if item_url == page.url %}
+    {% assign c = "active" %}
+    {% else %}
+    {% assign c = "" %}
+    {% endif %}
+
     <div class="grid">
-      <a href="{{ page.grid_link | prepend: site.baseurl | prepend: site.url }}">
-        <img src="{{ "/assets/images/" | append: page.grid_image | prepend: site.baseurl | prepend: site.url }}"/>
-        <p>{{ page.grid_text }}</p>
+      <a href="{{ item.href | prepend: site.baseurl | prepend: site.url }}">
+        <img src="{{ "/assets/images/" | append: item.image | prepend: site.baseurl | prepend: site.url }}"/>
+        <p>{{ item.label }}</p>
       </a>
     </div>
+    {% endfor %}
   </article>
 
-<!--</div> -->
+</div>

@@ -14,7 +14,7 @@ Big fan of Linux and the Open Source world, I'm always looking for new technolog
 
 ### Contact Me
 
-You can reach me at social medias below or even at [my personal e-mail address]({{site.email}})
+You can reach me at social medias below or even at <a href="mailto:{{site.email}}">my personal e-mail</a>.
 
 ---
 

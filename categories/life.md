@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Java
-permalink: /categories/java/
-banner_image: sample-banner-image-3.jpg
+title: Life as Programmer
+permalink: /categories/life/
+banner_image: life.png
 ---
 
 <div>
   {% assign post_counter = 0 %}
-  {% for post in site.categories.java %}
+  {% for post in site.categories.life %}
     {% assign post_counter = post_counter | plus: 1 %}
     {% capture currentyear %}{{post.date | date: "%Y"}}{% endcapture %}
     {% if currentyear != year %}
