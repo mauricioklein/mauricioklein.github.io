@@ -31,7 +31,7 @@ theme:
   disqus_shortname: mauricio_kleins_blog
 
   # Google Analytics/Webmaster key, leave blank to ignore
-  google_analytics_key:
+  google_analytics_key: UA-63600025-1
   google_webmaster_key:
 
 # Build settings
