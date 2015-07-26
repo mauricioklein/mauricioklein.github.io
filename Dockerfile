@@ -22,6 +22,7 @@ RUN bundle install
 # Copy project to container
 #
 ADD . /root/jekyll
+WORKDIR /root/jekyll
 
 #
 # Listen to port 4000
