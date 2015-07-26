@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "What to do when Docker client and server version don't match?"
-date: 2015-06-22 17:10:00
-categories: Docker
+title:  "Feedback Profissional"
+date: 2015-06-30 11:00:00
+categories: life
 banner_image: docker.png
 comments: true
-excerpt: What to do when docker upgrade breaks everything? Check here.
+excerpt: Recentemente solicitei feedback profissional aos colegas de trabalho. Eis os retornos.
 ---
 Docker is a great tool to create a self-contained environment to run your applications, dealing easily with the problems of package dependencies and other stuff that bothers every software developer.
 
