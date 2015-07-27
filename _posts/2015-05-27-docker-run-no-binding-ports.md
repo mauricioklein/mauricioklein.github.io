@@ -3,7 +3,6 @@ layout: post
 title:  "What to do when <i>docker-compose run</i> doesn't bind ports?"
 date: 2015-05-27 14:04:00
 categories: Docker
-banner_image: docker.png
 comments: true
 excerpt: <i>docker-compose run</i> isn't forwarding ports? Check here how to fix it.
 ---
