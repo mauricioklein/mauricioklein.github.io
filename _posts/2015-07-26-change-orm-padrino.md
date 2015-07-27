@@ -66,7 +66,7 @@ And then, to prepare database to receive our models:
 
 {% highlight ruby %}
 # Edit config/database.rb to point to our Podtgres database.
-# Here, 'postgres' points to my Postgres database IP
+# (Here, 'postgres' points to my Postgres database IP. Change it to match your reality)
 ActiveRecord::Base.configurations[:development] = {
   :adapter => 'sqlite3',
   :database => Padrino.root('postgres', 'padrino_orm_poc_development.db')
@@ -82,7 +82,8 @@ ActiveRecord::Base.configurations[:test] = {
   :database => Padrino.root('postgres', 'padrino_orm_poc_test.db')
 }
 
-# Create database schema for the three environments: development, test and production
+# Create database schema for the three environments: 
+# development, test and production
 RACK_ENV=development rake db:create db:migrate
 RACK_ENV=test rake db:create db:migrate
 RACK_ENV=production rake db:create db:migrate
@@ -103,6 +104,7 @@ end
 {% endhighlight %}
 
 Now, let's assure our models are interacting correctly. Let's create a simple test in User spec that:
+
 1. Create an user;
 2. Create 3 posts;
 3. Associate posts to users;
@@ -220,16 +222,16 @@ _______
 
 To be able to use MongoID on your project, we basically need to:
 
-1. Install **MongoID gem**;
+1. Install MongoID gem;
 2. Create connection to MongoDB database;
 
 So, let's do it:
 
 {% highlight ruby %}
-# First of all, add the following line to you _Gemfile_
+# First of all, add the following line to you Gemfile
 gem 'mongoid'
 
-# And then, rerun _bundle install_
+# And then, rerun bundle install
 bundle install
 {% endhighlight %}
 
@@ -275,10 +277,10 @@ production:
 And, finally, create a new connection with MongoDB. So:
 
 {% highlight ruby %}
-# In _lib/connection_pool_management.rb_, remove this line...
+# In lib/connection_pool_management.rb, remove this line...
 ActiveRecord::Base.connection_pool.with_connection { @app.call(env) }
 
-# And in _config/boot.rb_, add these lines **after the lass _require_**
+# And in config/boot.rb, add these lines AFTER THE LAST 'REQUIRE' STATEMENT
 require 'mongoid'
 Mongoid.load!('config/mongoid.yml', RACK_ENV)
 {% endhighlight %}
@@ -296,12 +298,12 @@ We need to remove every reference to ActiveRecord from our models and replace by
 Let's do it:
 
 {% highlight ruby %}
-# Old **User Model**:
+# Old User Model:
 class User < ActiveRecord::Base
   has_many :posts
 end
 
-# New **User Model**
+# New User Model
 class User
   include Mongoid::Document
   field :name, type: String
@@ -311,12 +313,12 @@ class User
 end
 
 
-# Old **Post Model**:
+# Old Post Model:
 class Post < ActiveRecord::Base
   belongs_to :user
 end
 
-# New **Post Model**:
+# New Post Model:
 class Post
   include Mongoid::Document
   field :title, type: String
@@ -353,10 +355,10 @@ _config/database.rb_
 _db/_
 _postgres/_
 
-# Remove this line from _Rakefile_...
+# Remove this line from Rakefile...
 PadrinoTasks.use(:activerecord)
 
-# ... and these lines from _Gemfile_:
+# ... and these lines from Gemfile:
 gem 'activerecord'
 gem 'sqlite3'
 {% endhighlight %}
@@ -377,5 +379,17 @@ Finished in 0.00805 seconds (files took 0.52411 seconds to load)
 
 You have moved your project from _ActiveRecord + Sqlite_ to _MongoID + MongoDB_ \o/\o/\o/
 
+> The project used in this tutorial is available on Github. You can access it [Here][padrino-project]
+
+_______
+
+## Conclusion
+
+Padrino is a great framework for those who wants to enjoy the power of Sinatra without needing to configure everything mannually.
+However, even with a large number of generators and many utilities that saves much development time, there are situations where you will need to roll up your sleeves and dive into Padrino's internals. In these cases, Padrino and Sinatra documentation are your friends.
+
+And if nothing else works, well, just leave the gun and take the cannoli.
+
 [padrino-website]: http://www.padrinorb.com/
 [sinatra-website]: http://www.sinatrarb.com/
+[padrino-project]: https://github.com/mauricio-klein-blog-examples/padrino-orm-poc
