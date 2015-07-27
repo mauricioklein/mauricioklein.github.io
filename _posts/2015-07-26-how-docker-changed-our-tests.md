@@ -14,7 +14,7 @@ To keep everything running well, we do a lot (I mean, A LOT) of tests in our pla
 
 However, even after many tests, we still have bugs happening in production, sometimes things our tests should cover, but they don't.
 
-###### The question is: **why?**
+#### The question is: **why?**
 
 Why do we still have bugs happening in production after such an effort in testing our applications? The problem is: we're testing our applications isolated, and assuming that, once each unit is running well, together they will also run harmoniously. This is a huge mistake. It's like saying that a music band will be a huge success just because all band members are great musicians.
 
