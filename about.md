@@ -8,7 +8,7 @@ banner_image_alt: About me
 
 Hello!
 
-I'm Mauricio Klein, software developer with more than 5 years of experience.
+I'm Mauricio Klein, computer engineering student and software developer with more than 5 years of experience.
 
 Big fan of Linux and the Open Source world, I'm always looking for new technologies, that I'll share here.
 
