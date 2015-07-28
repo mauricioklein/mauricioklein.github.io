@@ -378,8 +378,6 @@ Finished in 0.00805 seconds (files took 0.52411 seconds to load)
 
 You have moved your project from _ActiveRecord + Sqlite_ to _MongoID + MongoDB_ \o/\o/\o/
 
-> The project used in this tutorial is available on Github. You can access it [here][padrino-project]
-
 _______
 
 ## Conclusion
@@ -388,6 +386,8 @@ Padrino is a great framework for those who wants to enjoy the power of Sinatra w
 However, even with a large number of generators and many usefull tools that save you a lot of development time, there are situations where you will need to roll up your sleeves and dive into Padrino's internals. In those cases, Padrino and Sinatra's documentation are your good allies.
 
 And, if nothing else works, well, just leave the gun and take the cannoli.
+
+> The project used in this tutorial is available on Github. You can access it [here][padrino-project]
 
 [padrino-website]: http://www.padrinorb.com/
 [sinatra-website]: http://www.sinatrarb.com/
