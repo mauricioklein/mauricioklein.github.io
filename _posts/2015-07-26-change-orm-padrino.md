@@ -15,10 +15,12 @@ I've decided to use this oportunity to explore a new technology, and the chosen 
 One of the steps for creating a Padrino app is to choose an ORM. Padrino supports many ORMs, such ActiveRecord, MongoID, DataMapper, etc.
 
 Well, in my project, I've choose ActiveRecord with Postgres. Why? Because I've had some familiarity with ActiveRecord from Rails.
+
 Everything was going well, the system taking form but then, I've realized that a relational database wouldn't be the best choice for my problem.
+
 So, I've decided to change from an ORM to a ODM (_object document mapping_), and the chosen one was MongoID + MongoDB.
 
-The challenge now is: how to move from ActiveRecord to MongoID?
+The challenge now is: **how to move from ActiveRecord to MongoID?**
 
 After some research, I've realized that Padrino doesn't provide an automated way to disable the old ORM and enable the new one. So, we need to do this manually.
 
