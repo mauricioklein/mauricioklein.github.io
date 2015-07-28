@@ -24,7 +24,7 @@ You can reach me:
 
 * Via **e-mail**, clicking **<a href="mailto:{{site.email}}">here</a>**
 
-* Or even at **social medias**, clicking on icons below;
+* Or even at **social medias**, clicking on icons below
 
 ---
 
