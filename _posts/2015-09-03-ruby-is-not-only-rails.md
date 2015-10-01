@@ -6,32 +6,40 @@ categories: Ruby
 comments: true
 excerpt: When you hear 'Ruby' always remember 'Rails'? You should read this post...
 ---
-Since the release of Rails framework, Ruby became the _language of the moment_. The easiness to create a complete web application in a short period of time and with low effort driven Rails to the top of rank, leading startups to exhaustively use it to create their prototypes and evolving them to a full product. Even big companies, such Twitter and Shopify have been benefited with the _new kid on the block_.
+Since the release of Rails framework, Ruby became the _language of the moment_. The easiness to create a complete web application in a short period of time and with low effort driven Rails to the top of rank, leading startups to exhaustively use it to create their prototypes and evolving them to a full product. Even big companies, such _Twitter_ and _Shopify_ have been benefited with the _new kid on the block_.
 
-However, with such popularity, come another problem: Ruby has became just... Rails.
+However, with such popularity, come another problem:
+
+> Ruby has became just... Rails.
 
 Some people have forgotten (or maybe didn't realized) that Rails is nothing more than a joint of Ruby gems working harmoniously.
-The same easiness and productivity that drove Rails to its popularity is the one who's Rails foundations, which is Ruby. And this is horrible, because now, every problem, if the small ones, are great candidates do been implemented in Rails.
+The same easiness and productivity that drove Rails to its popularity is the one who's Rails foundations, which is Ruby. And this is horrible, because now, every problem, even the small ones, are great candidates do been implemented in Rails.
 
-Need to create a complete webapp, with bunch of models, controllers, validations, a complex business logic? Do it with Rails...
+> Need to create a complete webapp, with bunch of models, controllers, validations, a complex business logic?
+>
+> Do it with Rails...
 
-Need to implement a simple static blog? Do it with Rails as well...
+> Need to implement a simple static blog?
+>
+> Do it with Rails as well...
 
-How much is 2 + 2? Oh, I really can't remember, but give me some minutes that I'll write a Rails app to figure it out...
+> How much is 2 + 2?
+>
+> Oh, I really can't remember, but give me some minutes that I'll write a Rails app to figure it out...
 
-This is similar to what happened with JQuery and I really expect that don't happen again with NodeJS.
+This is similar to what happened with _JQuery_ and I really expect that don't happen again with _NodeJS_.
 
 The purpose of this post is to show some alternatives to Rails framework and when one is more suitable than other in a given scenario.
 
 So, let's start...
 
-Sinatra
--------
-[Sinatra][sinatra-website] aims to be a lightweight option to create web applications with minimal effort. And by minimal, it really means minimal.
+[Sinatra][sinatra-website]
+---------------------------
+Sinatra aims to be a lightweight option to create web applications with minimal effort. And by minimal, it really means minimal.
 
 It provides a [DSL][dsl-wiki] which allows you to map routes to an specific URL and HTTP method. In other words, we can say:
 
-> When I receive a GET request in '/hello/foobar', I want to show the message 'Hello foobar'
+> When I receive a GET request in _http://localhost/hello/{my name}_, I want to show the message _Hello {my name}_
 
 So, the equivalent Sinatra code is:
 
@@ -41,7 +49,7 @@ get '/hello/:name' do
 end
 {% endhighlight %}
 
-> Now, when I receive a POST request in '/sinatra/', I want to show the message 'Sinatra Rocks!'
+> Now, when I receive a POST request in _http://localhost/sinatra/_, I want to show the message _Sinatra Rocks!_
 
 {% highlight ruby %}
 post '/sinatra/' do
@@ -51,7 +59,7 @@ end
 
 Easy, isn't?!
 
-Of course, only Sinatra we can't do much, but using additional gems, Sinatra power become unlimited.
+Of course, Sinatra alone can't do much, but using additional gems, Sinatra's power become unlimited.
 
 When to use Sinatra?
 
@@ -66,5 +74,77 @@ Why Sinatra?
 - Scalable;
 - Extensible;
 
+[Padrino][padrino-website]
+--------------------------
+As we saw before, Sinatra is a great framework to build simple webapps with low effort. However it implies that you must glue all the parts together manually, and this is such a pain in the #$@. To solve such problem, Padrino was released.
+
+Padrino, in small words, is Sinatra with generators.
+
+The whole framework runs over Sinatra, so the routes implementation is exactly the same in Sinatra, but the effort to configure the server, database, middleware, etc, is provided automatically in Padrino.
+
+It gives built-in support to many useful features, such generators, mailers, logging, template renderer, localization and even a simple administration tool, which helps a lot to control your system after the deploy.
+
+[Lotus][lotus-website]
+----------------------
+Climbing a little more in the ladder, we have Lotus.
+
+Lotus is a Ruby MVC framework which provides a syntax similar to Rails but lightweight.
+
+Is claims to bring back OO programming to Ruby web frameworks, something that's familiar to the ones that already know Rails.
+
+Even sharing some similarities with Rails, Lotus foundations are much simpler, using Rake as its middleware.
+
+We can see the similarities in the code below:
+
+{% highlight ruby %}
+# Defining a route mapping
+get '/', to: 'home#index'
+
+# Implementing the route handler
+module Web::Controllers::Home
+  class Index
+    include Web::Action
+
+    def call(params)
+    end
+  end
+end
+{% endhighlight %}
+
+As you can see both route mapping and route handler looks really similar to Rails, which provides an easy migration for those who's already using Rails, with the advantage of having a clearer and lightweight system.
+
+I haven't tested Lotus yet, but it's already on my list of things to study in future.
+
+[Volt][volt-website]
+--------------------
+The last framework on this post is a very interesting one.
+
+Volt is a reactive web framework for Ruby. For those who's updated with last tendencies on web development, reactive programming is gaining a lot of terrain in the last years. Basically it works oriented to **data flows** and **propagation of changes**. It means that a change in one part can reflect changes in the whole system, like an electrical system.
+
+Instead of syncing data between server and client via HTTP, Volt uses a persistent connection. It means that data between client and server are keep updated whichever side changes. This works even with multiple clients. If we have 10 users connected simultaneously on the system, if one of them changes some state, the other 9 users and the server as well is notified and changes are propagated.
+
+Also, Volt runs Ruby code in both back and frontend, with the help of [Opal][opal-website]. With such architecture, Volt makes easy to handle user interactions in the system, updating the whole interface based on these changes and, if desired, persist these changes on cache and/or database. It's a great choice for those systems where data changes constantly in both ends.
+
+Volt is a great framework which aims to solve a big lack of problems using an intelligent and simple approach.
+
+Conclusion
+----------
+Today, web development has reached a level of evolution that a single language or technology can't solve all problems. So, many languages have a lot of options to implement a system, each one with its specialties and weakness.
+
+So, focusing on a single technology, just because it's the easiest or more famous one is a big mistake.
+
+I'm not saying:
+
+> Rails sucks! Never use it anymore!
+
+The point is:
+
+> Use Rails when Rails is the right choice. Otherwise, there are plenty of other approaches which can make your system simpler, faster and can save a lot of development time.
+
 [sinatra-website]: http://www.sinatrarb.com/
+[padrino-website]: http://www.padrinorb.com/
+[lotus-website]: http://http://lotusrb.org/
+[volt-website]: http://voltframework.com/
+[opal-website]: http://opalrb.org/
+[reactive-programming-wiki]: https://en.wikipedia.org/wiki/Reactive_programming
 [dsl-wiki]: https://en.wikipedia.org/wiki/Domain-specific_language

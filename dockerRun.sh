@@ -48,7 +48,7 @@ case "$OPTION" in
       ;;
 
   "noninteractive"|"ni")
-      docker run -p ${PORT}:${PORT} -v "${LOCALDIR}":"${CONTAINERDIR}" -d ${IMAGENAME}
+      docker run -p ${PORT}:${PORT} -v "${LOCALDIR}":"${CONTAINERDIR}" -t ${IMAGENAME} preview
       ;;
 
   "logs"|"l")
