@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "What to do when <i>docker-compose run</i> doesn't bind ports?"
+title: "What to do when <i>docker-compose run</i> doesn't bind ports?"
 date: 2015-05-27 14:04:00
 categories: Docker
 comments: true

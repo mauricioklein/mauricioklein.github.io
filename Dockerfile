@@ -28,3 +28,11 @@ WORKDIR /root/jekyll
 # Listen to port 4000
 #
 EXPOSE 4000
+
+#
+# Set: 
+# - Rake as entrypoint;
+# - Preview as default argument
+#
+ENTRYPOINT ["rake"]
+CMD ["preview"]
