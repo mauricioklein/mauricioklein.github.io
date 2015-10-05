@@ -18,7 +18,7 @@ PORT=4000
 
 
 function getContainerId () {
-  CONTAINERID=$(docker ps | grep "${IMAGENAME}:latest" | head -1 | cut -d ' ' -f 1)
+  CONTAINERID=$(docker ps | grep "${IMAGENAME}" | head -1 | cut -d ' ' -f 1)
 }
 
 function showUsage () {
@@ -44,11 +44,11 @@ case "$OPTION" in
       ;;
 
   "interactive"|"i")
-      docker run -p ${PORT}:${PORT} -v "${LOCALDIR}":"${CONTAINERDIR}" -it ${IMAGENAME} bash
+      docker run -p ${PORT}:${PORT} -v "${LOCALDIR}":"${CONTAINERDIR}" --entrypoint '/bin/bash' -it ${IMAGENAME} 
       ;;
 
   "noninteractive"|"ni")
-      docker run -p ${PORT}:${PORT} -v "${LOCALDIR}":"${CONTAINERDIR}" -d ${IMAGENAME}
+      docker run -p ${PORT}:${PORT} -v "${LOCALDIR}":"${CONTAINERDIR}" -t ${IMAGENAME} preview
       ;;
 
   "logs"|"l")
