@@ -4,7 +4,7 @@ title:  How to delete files with special characters?
 date: 2016-01-26 23:21:00
 categories: Life
 comments: true
-excerpt: After more than 8 years using Linux, sometimes I still got stuck at __unusual situations__...
+excerpt: After more than 8 years using Linux, sometimes I still got stuck at "unusual situations"...
 ---
 After more than 8 years using Linux day-by-day, I always face some questions and problems that are completely new for me (I think this is the reason why I love Linux :P).
 
