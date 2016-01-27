@@ -6,13 +6,13 @@ categories: Life
 comments: true
 excerpt: After more than 8 years using Linux, sometimes I still got stuck at "unusual situations"...
 ---
-After more than 8 years using Linux day-by-day, I always face some questions and problems that are completely new for me (I think this is the reason why I love Linux :P).
+After more than 8 years using Linux day-by-day, sometimes I face some questions and problems that are completely new for me (I think this is the reason why I love Linux :P).
 
-So, I was beginning a new _Ruby on Rails_ project today and, since I was only interest in a RESTFul API, I decided to use the new **Rails-API**, which was integrated with the newest version of _Rails_ gem.
+So, I was beginning a new _Ruby on Rails_ project today and, since I was only interest in a __RESTFul API__, I decided to use the new __Rails-API__, which was integrated with the newest version of _Rails_ gem.
 
-To create a Rest API, the following command do the trick:
+To create a Rest API, the following command does the trick:
 
-```Ruby
+```ruby
 rails new my_awesome_app --api
 ```
 
