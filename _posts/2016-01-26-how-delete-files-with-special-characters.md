@@ -16,9 +16,9 @@ To create a Rest API, the following command does the trick:
 rails new my_awesome_app --api
 {% endhighlight %}
 
-However, after running the command above, I realized that the Rails gem version installed on my host wasn't new enough to recognize the _--api_ option.
+However, after running the command above, I realized that the Rails gem version installed on my host wasn't new enough to recognize the _- -api_ option.
 
-So, the result was a new ordinary Rails project saved in a directory names _--api_.
+So, the result was a new ordinary Rails project saved in a directory names _- -api_.
 
 # The Problem
 
@@ -32,13 +32,13 @@ $ rm -rf '--api'
 $ ls -1 | grep 'api' | xargs rm -rf # This one is the real face of desperation :P
 {% endhighlight %}
 
-... results in the same error: _--api option is not recognized_.
+... results in the same error: _- -api option is not recognized_.
 
 # The solution
 
 After some research, I found a feature, that's enabled in many other Linux commands, not only _rm_, that was completely new for me.
 
-Putting a _--_ in any part of the command says to the interpreter _"Stop parsing option from now on"_
+Putting a _- -_ in any part of the command says to the interpreter _"Stop parsing option from now on"_
 
 So, if I run...
 
@@ -46,7 +46,7 @@ So, if I run...
 $ rm -- --foo --bar
 {% endhighlight %}
 
-... it won't recognize _--foo_ and _--bar_ as flags to _rm_ command, but instead will treat them as regular parameters to command.
+... it won't recognize _- -foo_ and _- -bar_ as flags to _rm_ command, but instead will treat them as regular parameters to command.
 
 So, to solve our original problem, the command below is all we need:
 
