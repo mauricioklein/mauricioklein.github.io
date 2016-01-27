@@ -4,6 +4,7 @@ title:  How to delete files with special characters?
 date: 2016-01-26 23:21:00
 categories: Life
 comments: true
+excerpt: After more than 8 years using Linux, sometimes I still got stuck at __unusual situations__...
 ---
 After more than 8 years using Linux day-by-day, I always face some questions and problems that are completely new for me (I think this is the reason why I love Linux :P).
 
@@ -25,7 +26,7 @@ So, the result was a new ordinary Rails project saved in a directory names __--a
 
 Running...
 
-```sh
+```bash
 $ rm -rf --api
 $ rm -rf '--api'
 $ ls -1 | grep 'api' | xargs rm -rf # This one is the real face of desperation :P
@@ -41,7 +42,7 @@ Putting a __--__ in any part of the command says to the interpreter __"Stop pars
 
 So, if I run...
 
-```sh
+```bash
 $ rm -- --foo --bar
 ```
 
@@ -49,6 +50,6 @@ $ rm -- --foo --bar
 
 So, to solve our original problem, the command below is all we need:
 
-```sh
+```bash
 $ rm -rf -- --api
 ```
