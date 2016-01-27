@@ -18,7 +18,7 @@ rails new my_awesome_app --api
 
 However, after running the command above, I realized that the Rails gem version installed on my host wasn't new enough to recognize the _- -api_ option.
 
-So, the result was a new ordinary Rails project saved in a directory names _- -api_.
+So, the result was a new ordinary Rails project saved in a directory named _- -api_.
 
 # The Problem
 
