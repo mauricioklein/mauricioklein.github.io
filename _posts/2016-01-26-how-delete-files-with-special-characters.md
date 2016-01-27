@@ -12,9 +12,9 @@ So, I was beginning a new _Ruby on Rails_ project today and, since I was only in
 
 To create a Rest API, the following command does the trick:
 
-```ruby
+{% highlight sh %}
 rails new my_awesome_app --api
-```
+{% endhighlight %}
 
 However, after running the command above, I realized that the Rails gem version installed on my host wasn't new enough to recognize the __--api__ option.
 
@@ -26,11 +26,11 @@ So, the result was a new ordinary Rails project saved in a directory names __--a
 
 Running...
 
-```bash
+{% highlight sh %}
 $ rm -rf --api
 $ rm -rf '--api'
 $ ls -1 | grep 'api' | xargs rm -rf # This one is the real face of desperation :P
-```
+{% endhighlight %}
 
 ... results in the same error: __--api option is not recognized__.
 
@@ -42,14 +42,14 @@ Putting a __--__ in any part of the command says to the interpreter __"Stop pars
 
 So, if I run...
 
-```bash
+{% highlight sh %}
 $ rm -- --foo --bar
-```
+{% endhighlight %}
 
 ... it won't recognize __--foo__ and __--bar__ as flags to __rm__ command, but instead will treat them as regular parameters to command.
 
 So, to solve our original problem, the command below is all we need:
 
-```bash
+{% highlight sh %}
 $ rm -rf -- --api
-```
+{% endhighlight %}
