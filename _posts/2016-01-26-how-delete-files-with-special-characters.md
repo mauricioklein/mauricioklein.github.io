@@ -22,7 +22,7 @@ So, the result was a new ordinary Rails project saved in a directory names __--a
 
 # The Problem
 
-**how to delete this little bastard?**
+**How to delete this little bastard?**
 
 Running...
 
