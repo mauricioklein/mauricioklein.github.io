@@ -8,7 +8,7 @@ excerpt: After more than 8 years using Linux, sometimes I still got stuck at "un
 ---
 After more than 8 years using Linux day-by-day, sometimes I face some questions and problems that are completely new for me (I think this is the reason why I love Linux :P).
 
-So, I was beginning a new _Ruby on Rails_ project today and, since I was only interest in a _RESTFul API_, I decided to use the new __Rails-API__, which was integrated with the newest version of _Rails_ gem.
+So, I was beginning a new _Ruby on Rails_ project today and, since I was only interest in a _RESTFul API_, I decided to use the new _Rails-API_, which was integrated with the newest version of _Rails_ gem.
 
 To create a Rest API, the following command does the trick:
 
@@ -16,9 +16,9 @@ To create a Rest API, the following command does the trick:
 rails new my_awesome_app --api
 {% endhighlight %}
 
-However, after running the command above, I realized that the Rails gem version installed on my host wasn't new enough to recognize the __--api__ option.
+However, after running the command above, I realized that the Rails gem version installed on my host wasn't new enough to recognize the _--api_ option.
 
-So, the result was a new ordinary Rails project saved in a directory names __--api__.
+So, the result was a new ordinary Rails project saved in a directory names _--api_.
 
 # The Problem
 
@@ -32,13 +32,13 @@ $ rm -rf '--api'
 $ ls -1 | grep 'api' | xargs rm -rf # This one is the real face of desperation :P
 {% endhighlight %}
 
-... results in the same error: __--api option is not recognized__.
+... results in the same error: _--api option is not recognized_.
 
 # The solution
 
-After some research, I found a feature, that's enabled in many other Linux commands, not only __rm__, that was completely new for me.
+After some research, I found a feature, that's enabled in many other Linux commands, not only _rm_, that was completely new for me.
 
-Putting a __--__ in any part of the command says to the interpreter __"Stop parsing option from now on"__
+Putting a _--_ in any part of the command says to the interpreter _"Stop parsing option from now on"_
 
 So, if I run...
 
@@ -46,7 +46,7 @@ So, if I run...
 $ rm -- --foo --bar
 {% endhighlight %}
 
-... it won't recognize __--foo__ and __--bar__ as flags to __rm__ command, but instead will treat them as regular parameters to command.
+... it won't recognize _--foo_ and _--bar_ as flags to _rm_ command, but instead will treat them as regular parameters to command.
 
 So, to solve our original problem, the command below is all we need:
 
