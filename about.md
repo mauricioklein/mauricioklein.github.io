@@ -10,7 +10,7 @@ ___
 
 ### Hello!
 
-I'm **Mauricio Klein**, computer engineering student and software developer with more than 5 years of experience.
+I'm **Mauricio Klein**, computer engineering student and software developer with more than 7 years of experience.
 
 Large experience in web development, specially **Ruby on Rails** and **Java**.
 
