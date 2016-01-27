@@ -36,7 +36,7 @@ $ ls -1 | grep 'api' | xargs rm -rf # This one is the real face of desperation :
 
 # The solution
 
-After some research, I found a feature, that's enabled in many other Linux commands, not only _rm_, that was completely new for me.
+After some research, I found a feature, that's available in many other Linux commands, not only _rm_, but was completely new for me.
 
 Putting a _- -_ in any part of the command says to the interpreter _"Stop parsing option from now on"_
 
