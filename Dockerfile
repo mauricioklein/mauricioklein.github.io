@@ -19,9 +19,9 @@ WORKDIR /root/
 RUN bundle install
 
 #
-# Copy project to container
+# Project setup
 #
-ADD . /root/jekyll
+RUN mkdir /root/jekyll
 WORKDIR /root/jekyll
 
 #
@@ -30,9 +30,7 @@ WORKDIR /root/jekyll
 EXPOSE 4000
 
 #
-# Set: 
-# - Rake as entrypoint;
-# - Preview as default argument
+# Entrypoints
 #
 ENTRYPOINT ["rake"]
 CMD ["preview"]

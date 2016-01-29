@@ -116,6 +116,23 @@ At some point you want to link an external URL, in that case you could edit the 
 </nav>
 ```
 
+## Running Jekyll on Docker
+
+This project includes a **Dockerfile**, which allows lift a Jekyll container with this project and test it locally before pushing to Github.
+This container exposes port 4000 and expect a directory containing a valid Jekyll project on /root/jekyll.
+
+So, to lift the blog locally, follow the steps bellow:
+
+```bash
+# Build the image
+docker build -t jekyll-blog [Path do Dockerfile]
+
+# Lift the environment, mapping to port 4000 on localhost:
+docker run -p 4000:4000 -v $(pwd):/root/jekyll -d jekyll-blog
+```
+
+Now, the blog is accessible on [http://localhost:4000/](http://localhost:4000) :)
+
 ## License
 
 (The MIT License)
@@ -130,3 +147,4 @@ THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 [jekyll]: http://jekyllrb.com
 [df]: http://jekyllrb.com/docs/datafiles/
+
