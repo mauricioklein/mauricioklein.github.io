@@ -2,10 +2,14 @@
   href: "/categories/docker/"
   image: docker.png
 
-- label: "Ruby"
-  href: "/categories/ruby/"
-  image: ruby.png
-
 - label: "Life"
   href: "/categories/life/"
   image: life.png
+
+- label: "Linux"
+  href: "/categories/linux/"
+  image: tux.png
+
+- label: "Ruby"
+  href: "/categories/ruby/"
+  image: ruby.png
