@@ -2,7 +2,7 @@
 layout: post
 title:  "How Docker changed the way we do tests?"
 date: 2015-07-26 12:12:00
-categories: Docker Life
+categories: Docker
 comments: true
 excerpt: How Docker changed the way we do tests?
 ---
