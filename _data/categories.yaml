@@ -2,6 +2,10 @@
   href: "/categories/docker/"
   image: docker.png
 
+- label: "JavaScript"
+  href: "/categories/javascript/"
+  image: js.png
+
 - label: "Life"
   href: "/categories/life/"
   image: life.png
