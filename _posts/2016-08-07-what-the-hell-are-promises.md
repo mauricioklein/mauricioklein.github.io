@@ -20,6 +20,8 @@ _____
 Let's suppose we have a time consuming operation, like a database access, parse some file, etc.
 You, as a good programmer, won't let user waiting for this operation to finish. So, you decided to provide a callback to this time consuming method.
 
+A callback is nothing more than a function that will be called once this time consuming operation has finished.
+
 Just to exemplify this situation, let's consider the function below:
 
 {% highlight javascript %}
@@ -39,12 +41,15 @@ const timeConsumingOperation = (id, success, error) => {
 }
 {% endhighlight %}
 
-The method above generates a random value, between 1000 and 5000 (1 and 5 seconds). This value is send to *setTimeout()* method.
-After the timeout is complete, the callback is called.
-If the time generate was less than 4000 (4 seconds), success callback is invoked.
+The function above receives 3 arguments: an ID (used to identify the process), an two callbacks, one for success and other for error.
+
+It generates a random value, between 1000 and 5000 (1 and 5 seconds). This value is then send to *setTimeout()* method.
+
+After the timeout is complete, the appropriate callback is called:
+if the time generate was less than 4000 (4 seconds), success callback is invoked.
 Otherwise, error callback is invoked.
 
-So, we call this time consuming method, as below:
+So, calling this time consuming function, as below...
 
 {% highlight javascript %}
 timeConsumingOperation(0,
@@ -53,7 +58,7 @@ timeConsumingOperation(0,
 )
 {% endhighlight %}
 
-... and we get as result after 3 executions:
+... we get as result after 3 executions:
 
 {% highlight bash %}
 Operation finished successfully in 3659ms
@@ -63,7 +68,15 @@ Operation finished unsuccessfully: 4289ms > 4000ms
 
 No problem until here.
 
-But now, let's consider that you've 5 time consuming operations to perform and, after the last one successfully executed, you want to log a message in the console:
+But now, let's consider a more complex situation:
+
+Let's suppose that you're registering a new user in you platform, and, so, you need to perform 3 time consuming operations:
+
+* **Operation 1**: Create many records on database, like user profile, account, preferences, etc;
+* **Operation 2**: Validate user credit card;
+* **Operation 3**: Send welcome email;
+
+So, let's use our new branch function with callbacks to perform that.
 
 {% highlight javascript %}
 timeConsumingOperation(1,
@@ -75,17 +88,7 @@ timeConsumingOperation(1,
         timeConsumingOperation(3,
           (result) => {
             console.log(`Operation ${result.id} finished in ${result.time}ms`)
-            timeConsumingOperation(4,
-              (result) => {
-                console.log(`Operation ${result.id} finished in ${result.time}ms`)
-                timeConsumingOperation(5,
-                  (result) => {
-                    console.log(`Operation ${result.id} finished in ${result.time}ms`)
-                    console.log(`All 5 operations finished successfully in ${new Date().getTime() - initialTime}ms`)
-                  }
-                )
-              }
-            )
+            console.log(`All 3 operations finished successfully in ${new Date().getTime() - initialTime}ms`)
           }
         )
       }
@@ -98,8 +101,8 @@ WOW, what a mess!
 
 We have 3 main problems here:
 
-* This is clearly not scalable, since, for each new call we add, another *step in the ladder* is added
-* We don't have error handling here. So, adding the error callback for each time consuming call will turn this code in a *spaghetti* (and this is not cool, even if this code is going to be used in a Italian restaurant website)
+* This is a clearly convoluted code, since, for each new call we add, another *step in the ladder* is added;
+* We don't have error handling here. So, adding the error callback for each time consuming call will turn this code in a *spaghetti* (and this is not cool, even if this code is going to be used in an Italian restaurant website)
 * The worst one: this algorithm is now **synchronous**, since the next call is just performed once the previous one is finished
 
 There must be a better and cleaner way to do this...
@@ -112,7 +115,9 @@ _____
 
 Promise is a technique to perform asynchronous operations in a **composable** way.
 
-A promise, instead returning the result value of the operation, represents a operation that hasn't completed yet.
+A promise, instead returning the result value of the operation, represents a operation that hasn't completed yet. It's like saying:
+
+> I haven't finished my task yet but, as soon I do, I promise that I'll return a success or an error response.
 
 A promise can be in 3 different states:
 
@@ -129,7 +134,7 @@ _____
 In order to create a promise, we simply instantiate a new promise object, passing 2 callbacks as arguments: the first one is the **resolve callback** and the seconds one is the **reject callback**. Check it out:
 
 {% highlight javascript %}
-function createPromise() {
+function myBrandNewFunction() {
   return Promise.new((resolve, reject) => {
            if ([success]) resolve()
            else           reject()
@@ -141,20 +146,26 @@ Now we have to handle the both situations: the *success (resolve)* and *failure 
 
 Success operations are handled by the method **then()**, while error operations are handled by the method **catch()**.
 
-So, using our function *createPromise()* as example:
+So, using our function *myBrandNewFunction()* as example:
 
 {% highlight javascript %}
-createPromise()
+myBrandNewFunction()
   .then(()  => console.log('Promise resolved'))
   .catch(() => console.log('Promise rejected'))
 {% endhighlight %}
+
+In the example above, *myBrandNewFunction()* returns a promise. As soon this promise is created, it's in *pending* status, meaning that the execution isn't finished yet.
+
+Since the execution is done, the function decides which callback call: the *resolve* one or the *reject*.
+
+So, we now just need to treat each case: the success one (with *then()*) and the failure one (with *catch()*).
 
 We can also chain *then()* calls, where the input of the current *then()* is a promise provided by the previous one.
 
 For example:
 
 {% highlight javascript %}
-createPromise()
+myBrandNewFunction()
   .then(() => {
     console.log('Log message 1')
     return Promise.resolve()
@@ -174,9 +185,9 @@ _____
 
 ## Back to our problem
 
-So, now we know what a promise is and what's its purpose, let's adjust our ugly algorithm to use promises and see the result.
+So, now that we know what a promise is and what's its purpose, let's adjust our ugly algorithm to use promises and see the result.
 
-Let's make our time consuming operation return a promise instead calling a callback
+Let's make our time consuming operation return a promise instead calling a callback:
 
 {% highlight javascript %}
 // Callback success if time < 4000
@@ -197,7 +208,9 @@ const timeConsumingOperation = (id) => {
 }
 {% endhighlight %}
 
-So, now, we don't have to bother about callbacks, just handle the promise resolution:
+Notice that our argument list has reduced from 3 to 1 element, because we don't need provide callbacks for this method anymore.
+
+Now, let's handle the promise resolution:
 
 {% highlight javascript %}
 timeConsumingOperation(1)
@@ -213,20 +226,18 @@ But, what about our last problem:
 
 Well, no problem at all my friend!
 
-Promises provide a method called **all**, which basically waits for all promises to finished and, then:
+Promises class provide a method called **all**, which basically waits for all promises to finished and, then:
 
 * Resolve it, if all promises resolve, returning an array with all resolved values;
 * Reject it, if at least one of them rejected, returning the reject value;
 
-So, our *spaghetti* algorithm can be simplified by this one, using promises:
+So, our *spaghetti* algorithm from the callback example can be simplified by this one, using promises:
 
 {% highlight javascript %}
 Promise.all([
   timeConsumingOperation(1),
   timeConsumingOperation(2),
-  timeConsumingOperation(3),
-  timeConsumingOperation(4),
-  timeConsumingOperation(5)
+  timeConsumingOperation(3)
 ])
 .then ((results) => {
   results.forEach((result) => console.log(`Operation ${result.id} finished successfully in ${result.time}ms`))
@@ -236,10 +247,10 @@ Promise.all([
 
 Now, our code is:
 
-* **Callbacks free**: no more need to deal with callbacks. Promise handle that to us;
-* **Composable**: it's deadly easy to add more operations and handle their results;
+* **Callbacks free**: no more need to deal with callbacks. Promise handle that for us;
+* **Not convoluted**: it's deadly easy to add more operations and handle their results;
 * **Clean**: much more easy to understand the logic and maintain the code;
-* **Asynchronous**: all operations are dispatched in parallel, and *Promise.all* takes care of controlling all of them and resolving/rejecting them;
+* **Asynchronous**: all operations are dispatched in parallel, and *Promise.all* takes care of controlling everything and resolving/rejecting each operation;
 
 Promise class has a lot of other helpful methods. You can check all of them [here][promise-website].
 
