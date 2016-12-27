@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Forget the monkey patch: an introduction to Refine"
+title: "Forget the monkey patch: an introduction to Refinement"
 date: 2016-11-22
 categories: Ruby
 comments: true
