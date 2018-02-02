@@ -6,7 +6,7 @@ type: about
 
 Hello!
 
-I'm **Mauricio Klein**, computer engineering and software developer with more than 10 years of experience.
+I'm **Mauricio Klein**, computer engineer and software developer with more than 10 years of experience.
 
 Large experience in web development, specially **Ruby on Rails**, **Golang** and **Java**.
 
