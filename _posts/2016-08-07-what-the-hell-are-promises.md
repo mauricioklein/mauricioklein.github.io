@@ -1,10 +1,8 @@
 ---
-layout: post
-title:  "What the hell are promises?"
+title: "What the hell are promises?"
 date: 2016-08-07 10:56:00
-categories: JavaScript
-comments: true
-excerpt: Tired of hearing about promises and getting in a haze? Don't worry, I'll introduce you to the party...
+categories:
+- JavaScript
 ---
 
 Probably you've already heard about the new kid on the block: promises.

@@ -1,10 +1,8 @@
 ---
-layout: post
 title:  "Ruby isn't only Rails"
 date: 2015-10-05 00:06:00
-categories: Ruby
-comments: true
-excerpt: When you hear 'Ruby', you always remember 'Rails'? You should read this post...
+categories:
+- Ruby
 ---
 Since the release of Rails framework, Ruby became the _language of the moment_. The easiness to create a complete web application in a short period of time and with low effort drove Rails to the top of rank, leading startups to exhaustively use it to create their prototypes and evolving them to a full product. Even big companies, such _Twitter_ and _Shopify_ have been benefited with the _new kid on the block_.
 

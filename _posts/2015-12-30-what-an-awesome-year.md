@@ -1,10 +1,8 @@
 ---
-layout: post
 title:  What an awesome year
 date: 2015-12-30 17:42:00
-categories: Life
-comments: true
-excerpt: 2015 was an awesome year, and I wanna share it with you
+categories:
+- Life
 ---
 Well, 2015 is ending and, surely, I can say that this year was awesome.
 
@@ -61,7 +59,7 @@ Some personal projects weren't achieved this year (weight loss, specially), but 
 
 So, I wish you all the best in 2016, and expect that the new year brings more and more good feelings, amazing people, great projects and everything that makes a happy programmer :)
 
-[jojo-photo]: {{site.url}}/assets/images/jojo.jpg
-[vas-zenvia-photo]: {{site.url}}/assets/images/vas-zenvia.jpg
-[elliot-photo]: {{site.url}}/assets/images/elliot.jpg
-[i-will-be-back]: {{site.url}}/assets/images/i-will-be-back.jpg
+[jojo-photo]: {{site.url}}/assets/images/posts_images/jojo.jpg
+[vas-zenvia-photo]: {{site.url}}/assets/images/posts_images/vas-zenvia.jpg
+[elliot-photo]: {{site.url}}/assets/images/posts_images/elliot.jpg
+[i-will-be-back]: {{site.url}}/assets/images/posts_images/i-will-be-back.jpg

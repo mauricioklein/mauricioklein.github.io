@@ -1,10 +1,8 @@
 ---
-layout: post
-title:  "What's new in Ruby 2.4.0?"
+title: "What's new in Ruby 2.4.0?"
 date: 2016-08-06 16:18:00
-categories: Ruby
-comments: true
-excerpt: Ruby 2.4.0 is still on the oven, but we can check what's coming on...
+categories:
+- Ruby
 ---
 Ruby 2.4.0 is coming and, since an official release is still on the oven, we can play around with new improvements in the [preview1][preview1], released a couple of months ago.
 

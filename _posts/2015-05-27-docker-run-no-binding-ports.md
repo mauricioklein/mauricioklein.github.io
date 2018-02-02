@@ -1,10 +1,8 @@
 ---
-layout: post
 title: "What to do when <i>docker-compose run</i> doesn't bind ports?"
 date: 2015-05-27 14:04:00
-categories: Docker
-comments: true
-excerpt: <i>docker-compose run</i> isn't forwarding ports? Check here how to fix it.
+categories:
+- Docker
 ---
 Docker is a great tool to create a self-contained environment to run your applications, dealing easily with the problems of package dependencies and other stuff that bothers every software developer.
 

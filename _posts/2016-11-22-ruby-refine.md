@@ -1,10 +1,8 @@
 ---
-layout: post
 title: "Forget the monkey patch: an introduction to Refinement"
 date: 2016-11-22
-categories: Ruby
-comments: true
-excerpt: Check here how to do monkey patching without monkey patching
+categories:
+- Ruby
 ---
 One of the biggest problems in Ruby always was the impossibility to redefine class methods. Popular in many other languages, such practice was made possible in Ruby using a <i>workaround</i>: monkey patching
 
