@@ -1,10 +1,8 @@
 ---
-layout: post
 title: "Retrospective 2016"
 date: 2016-12-30
-categories: Life
-comments: true
-excerpt: Blessing, blessing and more blessing...
+categories:
+- Life
 ---
 Another year is coming to its end and I couldn't be more thankful about everything I've received...
 
@@ -77,6 +75,6 @@ for being so generous with me so far :)
 ![][frohes-neues-jahr]
 ***Frohes neues Jahr allerseits***!!!
 
-[graduation-photo]: {{site.url}}/assets/images/graduation.jpg
-[bag-photo]: {{site.url}}/assets/images/bag.jpg
-[frohes-neues-jahr]: {{site.url}}/assets/images/frohes-neues-jahr-deutsch.jpg
+[graduation-photo]: {{site.url}}/assets/images/posts_images/graduation.jpg
+[bag-photo]: {{site.url}}/assets/images/posts_images/bag.jpg
+[frohes-neues-jahr]: {{site.url}}/assets/images/posts_images/frohes-neues-jahr-deutsch.jpg

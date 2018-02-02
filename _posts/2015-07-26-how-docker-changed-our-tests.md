@@ -1,10 +1,8 @@
 ---
-layout: post
 title:  "How Docker changed the way we do tests?"
 date: 2015-07-26 12:12:00
-categories: Docker
-comments: true
-excerpt: How Docker changed the way we do tests?
+categories:
+- Docker
 ---
 I'm currently working at [Zenvia Mobile Results][zenvia], brazilian leader in corporate SMS.
 
@@ -68,8 +66,8 @@ To finish, Docker is just one of the available solutions. Many other approaches 
 > You have the weapon on your hand: just aim and pull the trigger.
 
 [zenvia]: http://www.zenvia.com.br/en/
-[find-you-kill-you]: {{site.url}}/assets/images/find_you_kill_you.jpg
-[automate-all]: {{site.url}}/assets/images/automate_all_the_things.jpg
+[find-you-kill-you]: {{site.url}}/assets/images/posts_images/find_you_kill_you.jpg
+[automate-all]: {{site.url}}/assets/images/posts_images/automate_all_the_things.jpg
 [jenkins]: https://jenkins-ci.org/
 [docker-client-github-search]: https://github.com/search?utf8=%E2%9C%93&q=docker+client
 [docker-komposer]: https://github.com/zenvia-mobile/docker-komposer

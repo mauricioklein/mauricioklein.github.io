@@ -1,10 +1,8 @@
 ---
-layout: post
 title:  "How to change ORM in Padrino project"
 date: 2015-07-26 19:26:00
-categories: Ruby
-comments: true
-excerpt: Have a Padrino project and wanna change ORM?! Check here how to do that...
+categories:
+- Ruby
 ---
 I'm currently developing my graduation thesis (yeah, the end is near \o/).
 
