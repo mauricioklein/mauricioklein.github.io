@@ -71,16 +71,6 @@ state:
   tags: Tags
   categories: Kategorien
 
-cheers:
-  um: Öhm..
-  ok: OK
-  nice: Schön
-  good: Gut
-  great: Wunderbar
-  excellent: Exzellent
-
-keep_on: Bleib dran.
-
 symbol:
   comma: '. '
   period: ', '

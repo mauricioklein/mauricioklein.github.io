@@ -69,16 +69,6 @@ state:
   tags: tags
   categories: categories
 
-cheers:
-  um: Um..
-  ok: OK
-  nice: Jolie
-  good: Bien
-  great: Super
-  excellent: Excellent
-
-keep_on: Et ca ne fait que commencer.
-
 symbol:
   comma: ', '
   period: '. '

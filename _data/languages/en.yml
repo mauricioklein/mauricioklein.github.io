@@ -78,16 +78,6 @@ state:
 search:
   placeholder: Searching...
 
-cheers:
-  um: Um..
-  ok: OK
-  nice: Nice
-  good: Good
-  great: Great
-  excellent: Excellent
-
-keep_on: Keep on posting.
-
 symbol:
   comma: ', '
   period: '. '

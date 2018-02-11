@@ -69,16 +69,6 @@ state:
   tags: tags
   categories: kategori
 
-cheers:
-  um: Um..
-  ok: OK
-  nice: Bagus
-  good: Bagus
-  great: Besar
-  excellent: Baik
-
-keep_on: Terus Posting.
-
 symbol:
   comma: ', '
   period: '. '

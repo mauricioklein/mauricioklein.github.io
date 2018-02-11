@@ -86,16 +86,6 @@ state:
 search:
   placeholder: Поиск...
 
-cheers:
-  um: Эм..
-  ok: OK
-  nice: Неплохо
-  good: Хорошо
-  great: Замечательно
-  excellent: Великолепно
-
-keep_on: Продолжаю писать.
-
 symbol:
   comma: ', '
   period: '. '

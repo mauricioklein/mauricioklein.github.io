@@ -69,16 +69,6 @@ state:
   tags: tags
   categories: categorias
 
-cheers:
-  um: Um..
-  ok: OK
-  nice: Legal
-  good: Bom
-  great: Grandioso
-  excellent: Excelente
-
-keep_on: Mantenha-se publicando!
-
 symbol:
   comma: ', '
   period: '. '

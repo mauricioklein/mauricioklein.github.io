@@ -77,16 +77,6 @@ state:
 search:
   placeholder: 搜索...
 
-cheers:
-  um: 嗯..
-  ok: OK
-  nice: 好
-  good: 很好
-  great: 非常好
-  excellent: 激爆好
-
-keep_on: 繼續努力。
-
 symbol:
   comma: '， '
   period: '。 '

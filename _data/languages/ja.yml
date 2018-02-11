@@ -69,16 +69,6 @@ state:
   tags: タグ
   categories: カテゴリ
 
-cheers:
-  um: うーん
-  ok: OK
-  nice: まあまあ
-  good: いいね
-  great: すごい
-  excellent: 最高
-
-keep_on: もっと書こう！
-
 symbol:
   comma: ', '
   period: '. '
