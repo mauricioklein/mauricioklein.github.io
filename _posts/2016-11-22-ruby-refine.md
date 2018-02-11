@@ -46,7 +46,7 @@ class String
 end
 {% endhighlight %}
 
-After running your cow/dog say methods, you got a strange behavior:
+After running your cow/dog say methods, you got a strange behaviour:
 
 {% highlight ruby %}
 cow.say # => "ooM"

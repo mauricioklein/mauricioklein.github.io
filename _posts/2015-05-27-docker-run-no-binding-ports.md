@@ -26,9 +26,9 @@ docker-compose run api bash
 
 ... will start the environment described in <i>docker-compose.yml</i>, executing an interactive bash in the container labelled as <i>api</i>.
 
-The problem comes when we do a port forward. By default, <i>docker-compose run</i> doesn't forward its ports. It isn't a bug, but its default behavior, as described in [Docker's official documentation][docker-compose-run-docs].
+The problem comes when we do a port forward. By default, <i>docker-compose run</i> doesn't forward its ports. It isn't a bug, but its default behaviour, as described in [Docker's official documentation][docker-compose-run-docs].
 
-To overcome this behavior, <i>docker-compose run</i> provides the <b>--service-ports</b> parameter, which enables port forwarding in <i>docker-compose run</i>.
+To overcome this behaviour, <i>docker-compose run</i> provides the <b>--service-ports</b> parameter, which enables port forwarding in <i>docker-compose run</i>.
 
 So, our previous command becomes something like this:
 {% highlight sh %}

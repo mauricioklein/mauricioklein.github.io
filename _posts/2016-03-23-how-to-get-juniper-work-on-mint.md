@@ -13,7 +13,7 @@ However, a special problem was driving me crazy.
 
 Every time, after connecting to _VPN_, the _Network Connect_ started correctly, stayed up for 2 seconds and, then... crash unexpectedly!
 
-I've checked many factors that could lead to such strange behavior, from browser compatibility to Java version running on browser, without success.
+I've checked many factors that could lead to such strange behaviour, from browser compatibility to Java version running on browser, without success.
 
 # The Solution
 

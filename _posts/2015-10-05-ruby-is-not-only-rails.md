@@ -10,7 +10,7 @@ However, with such popularity, came another problem:
 
 > Ruby has became just... Rails.
 
-Some people have forgotten (or maybe didn't realized) that Rails is nothing more than a joint of Ruby gems working harmoniously.
+Some people have forgotten (or maybe didn't realised) that Rails is nothing more than a joint of Ruby gems working harmoniously.
 The same easiness and productivity that drove Rails to its popularity is the one who's Rails foundations, which is Ruby. And this is horrible, because now, every problem, even the small ones, are great candidates do be implemented in Rails.
 
 > _**Need to create a complete webapp, with bunch of models, controllers, validations, and a complex business logic?**_
@@ -74,13 +74,13 @@ Of course, Sinatra alone can't do much, but using additional gems, Sinatra's pow
 
 [Padrino][padrino-website]
 --------------------------
-As we saw before, Sinatra is a great framework to build simple webapps with low effort. However it implies that you must glue all the parts together manually, and this is such a pain in the #$@. To solve such problem, Padrino was released.
+As we saw before, Sinatra is a great framework to build simple web apps with low effort. However it implies that you must glue all the parts together manually, and this is such a pain in the #$@. To solve such problem, Padrino was released.
 
 Padrino, in small words, is Sinatra with generators.
 
 The whole framework runs over Sinatra, so the routes implementation is exactly the same in Sinatra, but the effort to configure the server, database, middleware, etc, is provided automatically in Padrino.
 
-It gives built-in support to many useful features, such generators, mailers, logging, template renderer, localization and even a simple administration tool, which helps a lot to control your system after the deploy.
+It gives built-in support to many useful features, such generators, mailers, logging, template renderer, localisation and even a simple administration tool, which helps a lot to control your system after the deploy.
 
 > **Why Padrino?**
 >

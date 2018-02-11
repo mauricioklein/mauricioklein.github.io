@@ -29,7 +29,7 @@ considering my background as backend developer. But the result is amazing and is
 Besides the technical challenge, the emotional was impacted as well with all these changes. New job, moving to another country, new life,
 new challenges... No need to say that the fear of the uncertainty hit me and in some opportunities I got myself thinking in giving up of
 moving to Germany. Today I see how wrong and stupid I was being that time, and I own this to my wife Jordana who gave me all the support
-to realize that I was being silly.
+to realise that I was being silly.
 
 ![][bag-photo]
 
@@ -54,7 +54,7 @@ giving you support on hard times and celebrating the good ones with you.
 
 ## Plans to 2017
 
-This new year's eve will be even more special, because will really represent a new beggining, with new challenges, possibilities and things to live.
+This new year's eve will be even more special, because will really represent a new beginning, with new challenges, possibilities and things to live.
 
 Some of my plans to next year are fresh new ones, like build a solid career in Europe, learn German (I hate depends on English here in Germany) and, thinking higher, maybe
 start a master degree study here in Germany. I have, of course, some plans in the personal/family circle as well, but I they should be restricted to those involved :)

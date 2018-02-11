@@ -9,7 +9,7 @@ Probably you've already heard about the new kid on the block: promises.
 
 But, what the heck is a promise?
 
-Before we get in touch with this guy, let's contextualize the situation and understand where it's applicable.
+Before we get in touch with this guy, let's contextualise the situation and understand where it's applicable.
 
 _____
 

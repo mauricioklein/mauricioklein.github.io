@@ -46,7 +46,7 @@ _______
 
 ## Case conversion now works with Unicode
 
-Have you already got trolled by Ruby 2.3.0 when asked to upcase the word "época" (_epoch_ in portuguese) or any other string with non-ascii character and got as result something like _éPOCA_?
+Have you already got trolled by Ruby 2.3.0 when asked to upcase the word "época" (_epoch_ in Portuguese) or any other string with non-ascii character and got as result something like _éPOCA_?
 
 Well, this is not going to happen anymore on 2.4.0.
 
@@ -66,7 +66,7 @@ _______
 ## _to_time_ now preserves timezone
 
 In older Ruby versions, when asking for _to_time_ in _Time_ and _DateTime_ objects, the timezone were lost.
-Ruby 2.4.0 incorporates a bugfix fixing this behavior. Check it out:
+Ruby 2.4.0 incorporates a bug fix fixing this behaviour. Check it out:
 
 {% highlight ruby %}
 2.4.0-preview1 :041 > offset = 3.0 / 24 # Timezone: +03:00
@@ -87,6 +87,6 @@ Some performance improvements will be released as well, such like:
 
 * *Array#max* and *Array#min* no longer creates a temporary array under certain circumstances, which improves the response time and reduce the amount of memory used by your code.
 * Added *Regex#match?*, which just check if a given string matches the pattern, without creating a back reference object.
-* *Thread#report_on_exception* and *Thread.report_on_exception* added. When set to *true*, a report is generated when a thread dies. Today, you can only notice this behavior if another thread explicitly joins it.
+* *Thread#report_on_exception* and *Thread.report_on_exception* added. When set to *true*, a report is generated when a thread dies. Today, you can only notice this behaviour if another thread explicitly joins it.
 
 [preview1]: https://www.ruby-lang.org/en/news/2016/06/20/ruby-2-4-0-preview1-released/

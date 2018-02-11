@@ -6,21 +6,21 @@ categories:
 ---
 I'm currently developing my graduation thesis (yeah, the end is near \o/).
 
-I've decided to use this oportunity to explore a new technology, and the chosen one was **Padrino**.
+I've decided to use this opportunity to explore a new technology, and the chosen one was **Padrino**.
 
-[Padrino][padrino-website] is a Ruby framework built upon [Sinatra][sinatra-website]: Sinatra provides a simple DSL to create web applications and Padrino adds some usefull tools to automate the creation of routes, models, anyway, the project's bootstrap.
+[Padrino][padrino-website] is a Ruby framework built upon [Sinatra][sinatra-website]: Sinatra provides a simple DSL to create web applications and Padrino adds some useful tools to automate the creation of routes, models, anyway, the project's bootstrap.
 
 One of the steps for creating a Padrino app is to choose an ORM. Padrino supports many ORMs, such ActiveRecord, MongoID, DataMapper, etc.
 
 Well, in my project, I've choose ActiveRecord with Postgres. Why? Because I've had some familiarity with ActiveRecord from Rails.
 
-Everything was going well, the system taking form but then, I've realized that a relational database wouldn't be the best choice for my problem.
+Everything was going well, the system taking form but then, I've realised that a relational database wouldn't be the best choice for my problem.
 
 So, I've decided to change from an ORM to a ODM (_object document mapping_), and the chosen one was MongoID + MongoDB.
 
 The challenge now is: **how to move from ActiveRecord to MongoID?**
 
-After some research, I've realized that Padrino doesn't provide an automated way to disable the old ORM and enable the new one. So, we need to do this manually.
+After some research, I've realised that Padrino doesn't provide an automated way to disable the old ORM and enable the new one. So, we need to do this manually.
 
 _______
 
@@ -202,7 +202,8 @@ Finished in 0.12314 seconds (files took 0.4811 seconds to load)
 1 example, 0 failures
 {% endhighlight %}
 
-Great! We now have a simple Padrino project, running with two models (_User_ and _Post_), a simple test with RSpec and using ActiveRecord + Sqlite.
+Great! We now have a simple Padrino project, running with two models (_User_ and _Post_), a simple test with RSpec
+and using ActiveRecord + Sqlite.
 
 It's time to move to MongoID...
 
@@ -245,7 +246,8 @@ The next step is change _.components_ file to use MongoID instead of ActiveRecor
 :orm: mongoid
 {% endhighlight %}
 
-Now, we need to create _config/mongoid.yml_ file. This file is used to configure MongoDB connections used on our project. It's like the _config/database.rb_ for ActiveRecord.
+Now, we need to create _config/mongoid.yml_ file. This file is used to configure MongoDB connections used on
+our project. It's like the _config/database.rb_ for ActiveRecord.
 
 So, create the _config/mongoid.yml_ file with the following content:
 
@@ -338,9 +340,9 @@ Finished in 0.0115 seconds (files took 0.66445 seconds to load)
 
 **SUCCESS!!**
 
-We now have our Padrino project running with MongoID + MongoDB;
+We now have our Padrino project running with MongoID + MongoDB \o/
 
-It's time to clean up the house, removing ActiveRecord.
+Now, it's time to clean up the house, removing ActiveRecord.
 
 _______
 
@@ -383,7 +385,7 @@ _______
 ## Conclusion
 
 Padrino is a great framework for those who wants to enjoy the power of Sinatra without needing to configure everything manually.
-However, even with a large number of generators and many usefull tools that save you a lot of development time, there are situations where you will need to roll up your sleeves and dive into Padrino's internals. In those cases, Padrino and Sinatra's documentation are your good allies.
+However, even with a large number of generators and many useful tools that save you a lot of development time, there are situations where you will need to roll up your sleeves and dive into Padrino's internals. In those cases, Padrino and Sinatra's documentation are your good allies.
 
 And, if nothing else works, well, just leave the gun and take the cannoli.
 

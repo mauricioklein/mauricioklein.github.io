@@ -15,7 +15,7 @@ Scared as hell, afraid of not reaching the expected technical level required to 
 However, even as I was being thrown in this sea of new technologies and methodologies, I found people who were open to help me and guide me through this ecosystem. And more: they've taught me how to develop with quality and focusing not only in release speed, but mainly in **quality**.
 
 I remember that, when I started here, my knowledge in automated tests were basic, specially because I've come from companies where automated tests were so basic or even inexistent. Now, after 8 months of [Zenvia][zenvia-website], I'm much more critic about the
-quality of the artifact I'm releasing.
+quality of the artefact I'm releasing.
 
 > A code without tests is like hydrogen: everything seems to be OK right now, but a single miss step and everything explodes.
 
@@ -35,7 +35,7 @@ Some guys deserve a special thank you:
 
 - [Rafael Garbin][garbin-linkedin], for teaching me the importance of creating clean and reliable code, always focusing in quality;
 - [Thiago Ghilardi][ghilardi-linkedin], for being the best team leader (and now manager) I ever had;
-- [Tiago Oliveira][oliveira-linkedin], for being one of the best software engineers I ever worked with. Thanks for being such an inspiration in my career;
+- [Tiago Oliveira][oliveira-linkedin], for being one of the best software engineers I've ever worked with. Thanks for being such an inspiration in my career;
 
 Life goes on and I'm anxious to meet my new coworkers at [Codeminer42][codeminer-website], expecting to have an awesome experience, like the one I had here at [Zenvia][zenvia-website].
 

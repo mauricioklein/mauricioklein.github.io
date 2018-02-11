@@ -4,9 +4,9 @@ date: 2015-07-26 12:12:00
 categories:
 - Docker
 ---
-I'm currently working at [Zenvia Mobile Results][zenvia], brazilian leader in corporate SMS.
+I'm currently working at [Zenvia Mobile Results][zenvia], Brazilian leader in corporate SMS.
 
-Our team is responsable for evolving, fixing and maintaining many application, most of them with a huge load and many transactions per second.
+Our team is responsible for evolving, fixing and maintaining many application, most of them with a huge load and many transactions per second.
 
 To keep everything running well, we do a lot (I mean, A LOT) of tests in our platform. Well, that's useless to say, since testing software nowadays isn't an option, but mandatory.
 
@@ -21,16 +21,16 @@ So, we figured out that we've had a lack in **integration tests**.
 Ok, we faced the problem and we know where to improve. But how?
 Integrated tests used to be slow and hard, since each subsystem has its own requirements.
 
-One solution is to simply mock neighbor systems responses and check the system's under tests behavior with those responses. That can improve our tests, but we aren't testing the system under real situations. We all know that mocked tests is dangerous.
+One solution is to simply mock neighbour systems responses and check the system's under tests behaviour with those responses. That can improve our tests, but we aren't testing the system under real situations. We all know that mocked tests is dangerous.
 
 Ok, mocked tests aren't a solution. So we need a way to test our applications _as prodution_, something that's not easy.
 
 Here is where Docker shows up.
 
-With Docker, we're able to tests our applications in an integrated way. And by integrated I mean: something really close to production behavior.
+With Docker, we're able to tests our applications in an integrated way. And by integrated I mean: something really close to production behaviour.
 We can now lift the whole system and prepare them to process a request completely, a real end to end test.
 
-After such improvement in our mode of doing tests, we're now discovering bugs and misbehaviors we can't even imagine we had up to a month ago.
+After such improvement in our mode of doing tests, we're now discovering bugs and misbehaviours we can't even imagine we had up to a month ago.
 And that's great! Every software, even the most tested one, has bugs. It's our duty to find them and fix.
 
 ![][find-you-kill-you]
@@ -43,7 +43,7 @@ This automation can be achieved with **Docker clients**.
 
 To understand it, we first need to understand how Docker works.
 
-Basically, Docker works in a **client-server architecture**. Docker's server is responsable for controlling all images, containers, etc.
+Basically, Docker works in a **client-server architecture**. Docker's server is responsible for controlling all images, containers, etc.
 The client will simply do server requests, asking to perform actions, like download a new image, start a container, execute a command in a running container, etc.
 
 So, every _docker_ command you run in your host, you're actually making a client request to a Docker server. Generally, this server resides in your host, but it can be located somewhere else, like a friend's machine or even a server running [**Jenkins**][jenkins], and here's how we will automate our tests.
@@ -58,10 +58,10 @@ Once the tests are written, you can easily create triggers on Jenkins (or any ot
 We now have real tests, running a more similar production scenario, integrated to our pipeline.
 Of course, those tests are not 100% production like, since we don't have the same load we do in production, but it's a huge improvement compared to our old tests.
 
-To finish, Docker is just one of the available solutions. Many other approaches can be adopted, using containers, virtualization or even lifting your whole system in your host machine. The fact is: there aren't excuses anymore to assume that a well unit tested system is bug free or that you should to test your application in production.
+To finish, Docker is just one of the available solutions. Many other approaches can be adopted, using containers, virtualisation or even lifting your whole system in your host machine. The fact is: there aren't excuses anymore to assume that a well unit tested system is bug free or that you should to test your application in production.
 
 > Those dark days are gone.
-> A new age of self contained tests has arised.
+> A new age of self contained tests has arisen.
 > Bug's life is doomed.
 > You have the weapon on your hand: just aim and pull the trigger.
 
