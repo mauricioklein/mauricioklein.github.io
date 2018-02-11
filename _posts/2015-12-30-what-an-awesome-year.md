@@ -2,7 +2,7 @@
 title:  What an awesome year
 date: 2015-12-30 17:42:00
 categories:
-- Life
+- Life in IT
 ---
 Well, 2015 is ending and, surely, I can say that this year was awesome.
 

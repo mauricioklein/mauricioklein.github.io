@@ -2,7 +2,7 @@
 title: "Retrospective 2016"
 date: 2016-12-30
 categories:
-- Life
+- Life in IT
 ---
 Another year is coming to its end and I couldn't be more thankful about everything I've received...
 
