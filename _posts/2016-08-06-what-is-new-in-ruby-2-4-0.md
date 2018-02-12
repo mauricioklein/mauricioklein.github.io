@@ -1,6 +1,7 @@
 ---
 title: "What's new in Ruby 2.4.0?"
-date: 2016-08-06 16:18:00
+date: 2016-08-06
+excerpt: Ruby 2.4.0 is still on the oven, but we can check what's coming on...
 categories:
 - Ruby
 ---

@@ -1,6 +1,7 @@
 ---
-title:  How to get Juniper working on Mint?
-date: 2016-03-23 11:22:00
+title: "How to get Juniper working on Mint?"
+date: 2016-03-23
+excerpt: After a long time banging my head against Juniper, finally it's working on Mint...
 categories:
 - Linux
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Forget the monkey patch: an introduction to Refinement"
 date: 2016-11-22
+excerpt: Check here how to do monkey patching without monkey patching
 categories:
 - Ruby
 ---

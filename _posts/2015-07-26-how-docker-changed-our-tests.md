@@ -1,6 +1,7 @@
 ---
-title:  "How Docker changed the way we do tests?"
-date: 2015-07-26 12:12:00
+title: "How Docker changed the way we do tests?"
+date: 2015-07-26
+excerpt: How Docker changed the way we do tests?
 categories:
 - Docker
 ---

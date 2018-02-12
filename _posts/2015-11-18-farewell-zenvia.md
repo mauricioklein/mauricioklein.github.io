@@ -1,6 +1,7 @@
 ---
-title: Farewell, Zenvia
-date: 2015-11-18 17:34:00
+title: "Farewell, Zenvia"
+date: 2015-11-18
+excerpt: This is my last month at Zenvia, and I have something to say about it...
 categories:
 - Life in IT
 ---

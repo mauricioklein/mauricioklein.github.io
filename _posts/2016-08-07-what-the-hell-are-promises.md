@@ -1,6 +1,7 @@
 ---
 title: "What the hell are promises?"
-date: 2016-08-07 10:56:00
+date: 2016-08-07
+excerpt: Tired of hearing about promises and getting in a haze? Don't worry, I'll introduce you to the party...
 categories:
 - JavaScript
 ---

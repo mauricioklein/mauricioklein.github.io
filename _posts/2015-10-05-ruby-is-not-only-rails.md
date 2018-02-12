@@ -1,6 +1,7 @@
 ---
-title:  "Ruby isn't only Rails"
-date: 2015-10-05 00:06:00
+title: "Ruby isn't only Rails"
+date: 2015-10-05
+excerpt: When you hear 'Ruby', you always remember 'Rails'? You should read this post...
 categories:
 - Ruby
 ---

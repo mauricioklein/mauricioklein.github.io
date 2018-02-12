@@ -1,6 +1,7 @@
 ---
-title:  What an awesome year
-date: 2015-12-30 17:42:00
+title: "What an awesome year"
+date: 2015-12-30
+excerpt: 2015 was an awesome year, and I wanna share it with you
 categories:
 - Life in IT
 ---

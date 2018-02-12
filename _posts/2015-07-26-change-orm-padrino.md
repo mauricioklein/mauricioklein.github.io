@@ -1,6 +1,7 @@
 ---
-title:  "How to change ORM in Padrino project"
-date: 2015-07-26 19:26:00
+title: "How to change ORM in Padrino project"
+date: 2015-07-26
+excerpt: Have a Padrino project and wanna change ORM?! Check here how to do that...
 categories:
 - Ruby
 ---
