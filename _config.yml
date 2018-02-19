@@ -10,7 +10,7 @@ description: Senior Software Engineer
 author: Mauricio Klein
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
 language: en
-date_format: '%B %d, %Y'
+date_format: '%B %o, %Y'
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com' and baseurl as '/child'

@@ -22,8 +22,8 @@
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
               datetime="{{ post.date | date_to_xmlschema }}"
-              content="{{ post.date | date: site.date_format }}" >
-          {{ post.date | date: '%b %Y' }}
+              content="{% include date.html date=post.date format=site.date_format %}" >
+          {% include date.html date=post.date format='%b %Y' %}
         </time>
       </div>
 

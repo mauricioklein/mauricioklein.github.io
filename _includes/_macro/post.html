@@ -66,7 +66,7 @@
                 <span class="post-meta-item-text">{{ __.post.posted }}</span>
               {% endif %}
               <time title="{{ __.post.created }}" itemprop="dateCreated datePublished" datetime="{{ post.date | date_to_xmlschema }}">
-                {{ post.date | date: site.date_format }}
+                {% include date.html date=post.date format=site.date_format %}
               </time>
             {% endif %}
 
@@ -81,8 +81,8 @@
               {% if site.post_meta.item_text %}
                 <span class="post-meta-item-text">{{ __.post.modified }}</span>
               {% endif %}
-              <time title="{{ __.post.modified }}" itemprop="dateModified" datetime="{{ post.updated | date: site.date_format }}">
-                {{ post.updated | date: site.date_format }}
+              <time title="{{ __.post.modified }}" itemprop="dateModified" datetime="{% include date.html date=post.updated format=site.date_format %}">
+                {% include date.html date=post.updated format=site.date_format %}
               </time>
             {% endif %}
           </span>
