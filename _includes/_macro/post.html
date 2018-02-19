@@ -255,7 +255,6 @@
     {% endunless %}
 
     <div class="post-body{% if site.han %} han-init-context{% endif %}" itemprop="articleBody">
-
       {% comment %} Gallery support {% endcomment %}
       {% if post.photos and post.photos.size > 0 %}
         <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
@@ -278,42 +277,44 @@
       {% endif %}
 
       {% if is_index %}
-        {% if post.description and site.excerpt_description %}
-          {{ post.description }}
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="{{ post.url | relative_url }}">
-              {{ __.post.read_more }} &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        {% elsif post.excerpt  %}
-          {{ post.excerpt }}
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="{{ post.url | relative_url }}{% if site.scroll_to_more %}#{{ __.post.more }}{% endif %}" rel="contents">
-              {{ __.post.read_more }} &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        {% elsif site.auto_excerpt.enable %}
-          {% assign content = post.content | strip_html %}
-          {{ content | slice: 0, site.auto_excerpt.length }}
-          {% if content.size > site.auto_excerpt.length %}...{% endif %}
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="{{ post.url | relative_url }}{% if site.scroll_to_more %}#{{ __.post.more }}{% endif %}" rel="contents">
-              {{ __.post.read_more }} &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        {% else %}
-          {% if post.type == 'picture' %}
-            <a href="{{ post.url | relative_url }}">{{ post.content }}</a>
+        <center>
+          {% if post.description and site.excerpt_description %}
+            {{ post.description }}
+            <!--noindex-->
+            <div class="post-button text-center">
+              <a class="btn" href="{{ post.url | relative_url }}">
+                {{ __.post.read_more }} &raquo;
+              </a>
+            </div>
+            <!--/noindex-->
+          {% elsif post.excerpt  %}
+            {{ post.excerpt }}
+            <!--noindex-->
+            <div class="post-button text-center">
+              <a class="btn" href="{{ post.url | relative_url }}{% if site.scroll_to_more %}#{{ __.post.more }}{% endif %}" rel="contents">
+                {{ __.post.read_more }} &raquo;
+              </a>
+            </div>
+            <!--/noindex-->
+          {% elsif site.auto_excerpt.enable %}
+            {% assign content = post.content | strip_html %}
+            {{ content | slice: 0, site.auto_excerpt.length }}
+            {% if content.size > site.auto_excerpt.length %}...{% endif %}
+            <!--noindex-->
+            <div class="post-button text-center">
+              <a class="btn" href="{{ post.url | relative_url }}{% if site.scroll_to_more %}#{{ __.post.more }}{% endif %}" rel="contents">
+                {{ __.post.read_more }} &raquo;
+              </a>
+            </div>
+            <!--/noindex-->
           {% else %}
-            {{ post.content }}
+            {% if post.type == 'picture' %}
+              <a href="{{ post.url | relative_url }}">{{ post.content }}</a>
+            {% else %}
+              {{ post.content }}
+            {% endif %}
           {% endif %}
-        {% endif %}
+        </center>
       {% else %}
         {{ post.content }}
       {% endif  %}
