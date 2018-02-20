@@ -110,6 +110,9 @@ seo: false
 # subtitle: Subtitle
 index_with_subtitle: false
 
+# Google site verification
+google_site_verification: bK_wZNO5GJ62M54K63XiWiSsA8MA8F4invSa5r6DPcc
+
 # ---------------------------------------------------------------
 # Menu Settings
 # ---------------------------------------------------------------
