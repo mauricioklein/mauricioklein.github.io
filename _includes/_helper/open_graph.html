@@ -17,6 +17,7 @@
   {% assign url = page.url | absolute_url %}
   {% assign og_title = page.title | default: site.title %}
   {% assign site_name = site.title %}
+  {% assign author = site.author %}
   {% assign language = page.language | default: site.language %}
   {% assign updated = page.updated %}
   {% assign twitter_card = 'summary' %}
@@ -42,6 +43,9 @@
       {% endif %}
     {% endfor %}
   {% endif %}
+
+  <meta name="generator" content="Jekyll v{{ jekyll.version }}" /><!--newline-->
+  <meta property="author" content="{{ author | xml_escape }}"><!--newline-->
 
   {% if description %}
     <meta name="description" content="{{ description }}">
@@ -116,6 +120,21 @@
 
   {% if fb_app_id %}
     <meta property="fb:app_id" content="{{ fb_app_id | xml_escape }}">
+    <!--newline-->
+  {% endif %}
+
+  {% if paginator.previous_page %}
+    <link rel="prev" href="{{ paginator.previous_page_path | absolute_url }}" />
+    <!--newline-->
+  {% endif %}
+
+  {% if paginator.next_page %}
+    <link rel="next" href="{{ paginator.next_page_path | absolute_url }}" />
+    <!--newline-->
+  {% endif %}
+
+  {% if page.date %}
+    <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}" />
     <!--newline-->
   {% endif %}
 
