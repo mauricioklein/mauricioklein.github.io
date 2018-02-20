@@ -82,7 +82,7 @@ Basically, I've added the file `_includes/date.html` to my project, with the fol
 This template expects two parameters: the date to be formatted and the desired template.
 
 The trick lays on the last line: after the date is formatted, Liquid replaces all the `%o` occurrences
-by the calculated ordinal day. That means, if we provided the template `%B %o, %Y`, the formatted
+by the calculated ordinal day. That means, if we provide the template `%B %o, %Y`, the formatted
 date will be something like `January 3rd, 2018`.
 
 The `%o` is just a placeholder defined by myself. You can use anything you want, as long it
@@ -97,8 +97,7 @@ by their respective values:
   {% endraw %}
 {% endhighlight %}
 
-This can be a little verbose, compared to the plugin approach, but I think it's a good tradeoff, considering
-that I don't have to bother about building the static files manually :)
+This can be a little verbose compared to the plugin approach, but I think it's a good tradeoff, considering I don't have to bother about building the static files manually :)
 
 [strftime]: http://ruby-doc.org/core-2.2.1/Time.html#method-i-strftime
 [ordinal-plugin]: https://github.com/patrickcate/Jekyll-Ordinal
