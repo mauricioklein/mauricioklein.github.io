@@ -1,3 +1,4 @@
 _site
 .sass-cache
 .bash_history
+.DS_Store
