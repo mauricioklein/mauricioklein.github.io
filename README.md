@@ -9,7 +9,7 @@ The easiest way is using Docker:
 
 ```bash
 # Create the base image, with the dependencies pre-installed
-$ docker build -t blog .
+$ make docker
 
 # Run the blog project, mounting the local directory as
 # a volume on the container.
@@ -18,7 +18,7 @@ $ docker build -t blog .
 # modifications. This way, every time a file
 # is changed locally, Jekyll will automatically recompile
 # the statics inside the container and serve them.
-$ docker run --rm -v $(pwd):/app -p 4000:4000 -t blog
+$ make watch
 ```
 
 The blog can now be accessed on http://localhost:4000/.
