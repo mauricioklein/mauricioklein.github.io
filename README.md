@@ -19,6 +19,10 @@ $ make docker
 # is changed locally, Jekyll will automatically recompile
 # the statics inside the container and serve them.
 $ make watch
+
+# Run the blog project, opening a bash console
+# in the container (useful for development/debugging)
+$ make console
 ```
 
 The blog can now be accessed on http://localhost:4000/.
