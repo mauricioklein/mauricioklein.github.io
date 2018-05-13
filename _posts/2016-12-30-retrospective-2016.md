@@ -3,7 +3,9 @@ title: "Retrospective 2016"
 date: 2016-12-30
 excerpt: Blessing, blessing and more blessing...
 categories:
-- Life in IT
+  - Life in IT
+redirect_from:
+  - /life/2016/12/30/retrospective-2016/
 ---
 Another year is coming to its end and I couldn't be more thankful about everything I've received...
 

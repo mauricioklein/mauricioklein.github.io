@@ -3,7 +3,9 @@ title: "What an awesome year"
 date: 2015-12-30
 excerpt: 2015 was an awesome year, and I wanna share it with you
 categories:
-- Life in IT
+  - Life in IT
+redirect_from:
+  - /life/2015/12/30/what-an-awesome-year/
 ---
 Well, 2015 is ending and, surely, I can say that this year was awesome.
 

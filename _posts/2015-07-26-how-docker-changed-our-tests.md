@@ -3,7 +3,9 @@ title: "How Docker changed the way we do tests?"
 date: 2015-07-26
 excerpt: How Docker changed the way we do tests?
 categories:
-- Docker
+  - Docker
+redirect_from:
+  - /docker/life/2015/07/26/how-docker-changed-our-tests/
 ---
 I'm currently working at [Zenvia Mobile Results][zenvia], Brazilian leader in corporate SMS.
 

@@ -216,6 +216,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  jekyll-redirect-from
   therubyracer (~> 0.12)
 
 BUNDLED WITH

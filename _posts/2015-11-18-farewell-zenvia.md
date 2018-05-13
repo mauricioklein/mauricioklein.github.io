@@ -3,7 +3,9 @@ title: "Farewell, Zenvia"
 date: 2015-11-18
 excerpt: This is my last month at Zenvia, and I have something to say about it...
 categories:
-- Life in IT
+  - Life in IT
+redirect_from:
+  - /life/2015/11/18/farewell-zenvia/
 ---
 Well, after 8 months working here at [Zenvia][zenvia-website], I'm leaving my current position for the constant search of new challenges and knowledge, this time at [Codeminer42][codeminer-website].
 
