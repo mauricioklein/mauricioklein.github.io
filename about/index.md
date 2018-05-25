@@ -4,6 +4,8 @@ title: About me
 type: about
 ---
 
+<img class="about-img" src="{{site.url}}/assets/images/avatar.gif">
+
 Hello!
 
 I'm **Mauricio Klein**, computer engineer and software developer with more than 10 years of experience.
