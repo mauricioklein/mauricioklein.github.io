@@ -6,13 +6,19 @@ type: about
 
 <img class="about-img" src="{{site.url}}/assets/images/avatar.gif">
 
-Hello!
+Hi!
 
-I'm **Mauricio Klein**, computer engineer and software developer with more than 10 years of experience.
+I'm **Mauricio Klein**, software engineer with more than 10 years of experience in small, mid-level and big companies.
 
-Large experience in web development, specially **Ruby on Rails**, **Golang** and **Java**.
+_AWS Certified Solutions Architect - Associate (SSA)_ since April/2019.
 
-Big fan of Linux and the Open Source world, I'm always looking for new technologies, that I'll share here.
+I'm specialized in backend systems, acting as a team lead in the last years.
+
+My main interests are:
+- Serverless architecture
+- Kubernates
+- Distributed systems
+- Infrastructure automation
 
 If you're looking for a skilled software engineer for your project or just want to chat about technology,
 you can reach me on [Github][github], [Twitter][twitter] or [Linkedin][linkedin].
