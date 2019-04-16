@@ -16,7 +16,7 @@ I'm specialized in backend systems, acting as a team lead in the last years.
 
 My main interests are:
 - Serverless architecture
-- Kubernates
+- Kubernetes
 - Distributed systems
 - Infrastructure automation
 
