@@ -9,7 +9,7 @@ The easiest way is using Docker:
 
 ```bash
 # Create the base image, with the dependencies pre-installed
-$ make docker
+$ make image
 
 # Run the blog project, mounting the local directory as
 # a volume on the container.
