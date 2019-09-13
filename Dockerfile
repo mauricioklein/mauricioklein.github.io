@@ -1,6 +1,8 @@
-from ruby:2.5.0
+FROM ruby:2.5-alpine
 
 ENV APP_PATH /app
+
+RUN apk add --no-cache make build-base
 
 RUN mkdir -p $APP_PATH
 
