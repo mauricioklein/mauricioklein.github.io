@@ -4,7 +4,7 @@ title: About me
 type: about
 ---
 
-<img class="about-img" src="{{site.url}}/assets/images/avatar.jpg">
+<img class="about-img" src="/assets/images/avatar.jpg">
 
 Hi!
 
