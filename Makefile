@@ -17,6 +17,6 @@ watch:
 	docker run --rm \
 		-v $(PROJECT_PATH):/app \
 		-p 4000:4000 \
-		-t blog
+		-t blog --incremental
 
 .PHONY: image console watch
