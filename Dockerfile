@@ -15,4 +15,4 @@ RUN ["bundle", "install"]
 
 EXPOSE 4000
 
-ENTRYPOINT ["bundle", "exec", "jekyll", "server", "-P", "4000", "-H", "0.0.0.0"]
+ENTRYPOINT ["bundle", "exec", "jekyll", "serve", "-P", "4000", "-H", "0.0.0.0"]
