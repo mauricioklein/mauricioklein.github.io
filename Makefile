@@ -14,6 +14,7 @@ console:
 
 # Runs the blog in watch mode
 watch:
+	rm -f .jekyll-metadata
 	docker run --rm \
 		-v $(PROJECT_PATH):/app \
 		-p 4000:4000 \
