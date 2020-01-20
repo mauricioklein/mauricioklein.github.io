@@ -3,3 +3,4 @@ _site
 .bash_history
 .DS_Store
 .jekyll-metadata
+node_modules/

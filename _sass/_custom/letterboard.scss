@@ -1,0 +1,25 @@
+// Letterboard styles
+
+.phrase {
+  width: 50%;
+  padding: 8px 10px;
+  margin: 8px 0;
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
+}
+
+.error-box, .success-box {
+  width: 50%;
+  margin: 10px 0px;
+  padding: 3px 0px 3px 0px;
+}
+
+.success-box {
+  color: #4F8A10;
+  background-color: #DFF2BF;
+}
+
+.error-box {
+  color: #D8000C;
+  background-color: #FFD2D2;
+}
