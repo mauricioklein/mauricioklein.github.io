@@ -1,5 +1,7 @@
 <template>
   <center>
+    <LettersTable :table="table" />
+
     <input
       v-for="(phrase, index) in phrases"
       :key="index"
@@ -14,12 +16,12 @@
 
 <script>
   import Vue from 'vue'
-  import { Result } from  './components';
+  import { LettersTable, Result } from  './components';
 
   export default Vue.component('App', {
     data: () => ({
       phrases: ["", ""],
-      board: {
+      table: {
         'a': 8, 'b': 6, 'c': 6, 'd': 6,
         'e': 8, 'f': 4, 'g': 6, 'h': 6,
         'i': 8, 'j': 4, 'k': 6, 'l': 8,
@@ -32,17 +34,18 @@
     }),
 
     components: {
+      LettersTable,
       Result
     },
 
     computed: {
       missing: function() {
-        return this.calculate_missing(this.phrases, Object.assign({}, this.board))
+        return this.calculate_missing(this.phrases, Object.assign({}, this.table))
       }
     },
 
     methods: {
-      calculate_missing: (phrases, dictionary) => {
+      calculate_missing: (phrases, table) => {
         const missing = {}
 
         // Discount from the dictionary the letters
@@ -51,12 +54,12 @@
           phrase
             .toLowerCase()
             .split('')
-            .filter(ch => ch in dictionary)
+            .filter(ch => ch in table)
             .forEach(ch => {
-              dictionary[ch]--
+              table[ch]--
 
-              if (dictionary[ch] < 0) {
-                missing[ch] = -dictionary[ch]
+              if (table[ch] < 0) {
+                missing[ch] = -table[ch]
               }
             })
         }

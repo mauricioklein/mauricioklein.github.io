@@ -1,11 +1,7 @@
-// import Chars from './Chars'
-import Error from './Error'
-import Success from './Success'
+import LettersTable from './LettersTable'
 import Result from './Result'
 
 export {
-    // Chars,
-    Error,
-    Success,
+    LettersTable,
     Result
 }

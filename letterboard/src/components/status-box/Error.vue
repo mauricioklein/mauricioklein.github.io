@@ -1,11 +1,5 @@
 <template>
   <div>
-  <!-- <div class="error-box">
-    <v-alert type="error" dense v-for="(count, char) in missing" :key="char" >
-      Missing {{ count }} {{ char }}'s
-    </v-alert>
-    <b>Missing {{ count }} {{ char }}'s</b>
-  </div> -->
     <div class="error-box" v-for="(count, char) in missing" :key="char">
       <b>Missing {{ count }} {{ char }}'s</b>
     </div>
