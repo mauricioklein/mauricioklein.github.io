@@ -10,16 +10,20 @@ Hi!
 
 I'm **Mauricio Klein**, software engineer with more than 12 years of experience in small, mid-level and big companies.
 
-_AWS Certified Solutions Architect - Associate (SSA)_ since April/2019.
+> **AWS Certified Solutions Architect - Associate (SSA)** since April/2019.
+>
+> **AWS Certified Developer - Associate (DVA)** since April/2020.
 
-I'm specialized in backend systems, acting as a team lead in the last years. More recently, working dedicated as an ops engineer.
+I'm specialized in backend systems, acting as a team lead in the last years. 
+
+More recently, working as a software development engineer @ AWS.
 
 My main interests are:
 - Cloud computing
-- Kubernetes
-- Infrastructure automation
-- Chaos engineering
 - Serverless architecture
+- Infrastructure automation
+- Kubernetes
+- Chaos engineering
 - Distributed systems
 
 If you're looking for a skilled engineer for your project or just want to chat about technology,
