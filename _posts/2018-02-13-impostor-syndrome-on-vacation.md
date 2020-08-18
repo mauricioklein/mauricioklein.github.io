@@ -3,7 +3,9 @@ title: "Why can't I enjoy vacations (and this is totally my fault)?"
 date: 2018-02-13
 excerpt: Some people can't enjoy vacations... I'm one of them...
 categories:
-- Life in IT
+  - Life in IT
+redirect_from:
+  - /life%20in%20it/2018/02/13/impostor-syndrome-on-vacation/
 ---
 
 Hey there!

@@ -3,7 +3,9 @@ title: "How Kanban helped me to organise my life"
 date: 2018-05-11
 excerpt: After a long time searching for a way to organise my life, the answer was right there, in Kanban
 categories:
-- Life in IT
+  - Life in IT
+redirect_from:
+  - /life%20in%20it/2018/05/11/kanban-daily-tasks/
 ---
 
 After 10 years working in IT, I can say I'm pretty organised related to my tasks:
@@ -78,12 +80,12 @@ Here's a screenshot of my current _life board_ (unfortunately cards are describe
 After around a month, I can see the following results:
 
 - I'm more efficient related to the life tasks. Everytime something gets done, I've a personal
-pleasure in moving the card to the `Done` list. In this sense, the board acts like some kind of reward system, because a clean board is a happy board :)
+  pleasure in moving the card to the `Done` list. In this sense, the board acts like some kind of reward system, because a clean board is a happy board :)
 - I've full control about the state of my tasks. I can't remember how many times I had to scour
-my emails to find the last feedback about a task. With this new board, I've the entire history
-of a subject organised and directly available when I need.
+  my emails to find the last feedback about a task. With this new board, I've the entire history
+  of a subject organised and directly available when I need.
 - No more lost deadlines, since I can use the `due date` feature on Trello's card to remind me about
-that.
+  that.
 - Even my wife liked the idea and now she has her own board too. Most of the time she's the one who feeds my backlog, so I can no longer say I'm my own stakeholder :P
 
 ## Conclusion

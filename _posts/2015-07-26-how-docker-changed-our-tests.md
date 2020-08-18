@@ -6,6 +6,7 @@ categories:
   - Docker
 redirect_from:
   - /docker/life/2015/07/26/how-docker-changed-our-tests/
+  - /docker/2015/07/26/how-docker-changed-our-tests/
 ---
 I'm currently working at [Zenvia Mobile Results][zenvia], Brazilian leader in corporate SMS.
 

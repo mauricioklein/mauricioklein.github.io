@@ -3,7 +3,9 @@ title: "Importing IAM roles & policies in Terraform"
 date: 2019-09-30
 excerpt: Legacy IAM resources? No problem! Terraform can handle it...
 categories:
-- Terraform
+  - Terraform
+redirect_from:
+  - /terraform/2019/09/30/terraform-import-role-policy/
 ---
 
 Immutable infrastructure has changed the way operations teams deal with cloud infrastructure and setup. The ability to translate into code the desired state of your infra improves resilience and auditing, just to mention few, by having a formal definition of your cloud requirements.

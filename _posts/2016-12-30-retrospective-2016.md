@@ -6,6 +6,7 @@ categories:
   - Life in IT
 redirect_from:
   - /life/2016/12/30/retrospective-2016/
+  - /life%20in%20it/2016/12/30/retrospective-2016/
 ---
 Another year is coming to its end and I couldn't be more thankful about everything I've received...
 
@@ -49,11 +50,11 @@ it would be... It was even better than expected <3
 And now, on the last week of the year, already living in Berlin, with my beloved wife and dogs, I see that:
 
 - **Life is completely unpredictable**: No matter how much you plan your next steps and prepare yourself for the future. This only will make your path more comfortable,
-but the final decision was never on your hands.
+  but the final decision was never on your hands.
 - **Dreams can really became true**: Even with the concurrency of other countries and other developers around the world, I've never gave up of my dream to return to
-Europe with a job, no matter how far it seemed to be. Planning my next steps keeping this dream as the main objective was decisive to achieve this.
+  Europe with a job, no matter how far it seemed to be. Planning my next steps keeping this dream as the main objective was decisive to achieve this.
 - **Family comes before everything**: No matter how good you're in your career and how disputed you're by companies, the family is the only thing that will be always with you,
-giving you support on hard times and celebrating the good ones with you.
+  giving you support on hard times and celebrating the good ones with you.
 
 ## Plans to 2017
 

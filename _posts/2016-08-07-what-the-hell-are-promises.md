@@ -3,7 +3,9 @@ title: "What the hell are promises?"
 date: 2016-08-07
 excerpt: Tired of hearing about promises and getting in a haze? Don't worry, I'll introduce you to the party...
 categories:
-- JavaScript
+  - JavaScript
+redirect_from:
+  - /javascript/2016/08/07/what-the-hell-are-promises/
 ---
 
 Probably you've already heard about the new kid on the block: promises.
@@ -29,14 +31,14 @@ Just to exemplify this situation, let's consider the function below:
 const MAX_SUCCESS_TIME = 4000
 
 const timeConsumingOperation = (id, success, error) => {
-  // Generate a random value between 1000 and 5000
-  // (used in interval)
+// Generate a random value between 1000 and 5000
+// (used in interval)
   const time = Math.round((Math.random() * 4000) + 1000)
 
-  setTimeout(() => {
-    if (time < MAX_SUCCESS_TIME) success({id: id, time: time})
+setTimeout(() => {
+if (time < MAX_SUCCESS_TIME) success({id: id, time: time})
     else                         error  ({id: id, time: time})
-  }, time)
+}, time)
 }
 {% endhighlight %}
 
@@ -52,7 +54,7 @@ So, calling this time consuming function, as below...
 
 {% highlight javascript %}
 timeConsumingOperation(0,
-  (result) => console.log(`Operation finished successfully in ${result.time}ms`),
+(result) => console.log(`Operation finished successfully in ${result.time}ms`),
   (error)  => console.log(`Operation finished unsuccessfully: ${error.time}ms > ${MAX_SUCCESS_TIME}ms`)
 )
 {% endhighlight %}
@@ -79,20 +81,20 @@ So, let's use our new branch function with callbacks to perform that.
 
 {% highlight javascript %}
 timeConsumingOperation(1,
-  (result) => {
-    console.log(`Operation ${result.id} finished in ${result.time}ms`)
-    timeConsumingOperation(2,
-      (result) => {
-        console.log(`Operation ${result.id} finished in ${result.time}ms`)
-        timeConsumingOperation(3,
-          (result) => {
-            console.log(`Operation ${result.id} finished in ${result.time}ms`)
-            console.log(`All 3 operations finished successfully in ${new Date().getTime() - initialTime}ms`)
-          }
-        )
-      }
-    )
-  }
+(result) => {
+console.log(`Operation ${result.id} finished in ${result.time}ms`)
+timeConsumingOperation(2,
+(result) => {
+console.log(`Operation ${result.id} finished in ${result.time}ms`)
+timeConsumingOperation(3,
+(result) => {
+console.log(`Operation ${result.id} finished in ${result.time}ms`)
+console.log(`All 3 operations finished successfully in ${new Date().getTime() - initialTime}ms`)
+}
+)
+}
+)
+}
 )
 {% endhighlight %}
 
@@ -134,10 +136,10 @@ In order to create a promise, we simply instantiate a new promise object, passin
 
 {% highlight javascript %}
 function myBrandNewFunction() {
-  return Promise.new((resolve, reject) => {
-           if ([success]) resolve()
+return Promise.new((resolve, reject) => {
+if ([success]) resolve()
            else           reject()
-         })
+})
 }
 {% endhighlight %}
 
@@ -150,7 +152,7 @@ So, using our function *myBrandNewFunction()* as example:
 {% highlight javascript %}
 myBrandNewFunction()
   .then(()  => console.log('Promise resolved'))
-  .catch(() => console.log('Promise rejected'))
+.catch(() => console.log('Promise rejected'))
 {% endhighlight %}
 
 In the example above, *myBrandNewFunction()* returns a promise. As soon this promise is created, it's in *pending* status, meaning that the execution isn't finished yet.
@@ -165,19 +167,19 @@ For example:
 
 {% highlight javascript %}
 myBrandNewFunction()
-  .then(() => {
-    console.log('Log message 1')
-    return Promise.resolve()
-  })
-  .then(() => {
-    console.log('Log message 2')
-    return Promise.resolve()
-  })
-  .then(() => {
-    console.log('Log message 3')
-    return Promise.reject()
-  })
-  .catch(() => console.log('Promise rejected'))
+.then(() => {
+console.log('Log message 1')
+return Promise.resolve()
+})
+.then(() => {
+console.log('Log message 2')
+return Promise.resolve()
+})
+.then(() => {
+console.log('Log message 3')
+return Promise.reject()
+})
+.catch(() => console.log('Promise rejected'))
 {% endhighlight %}
 
 _____
@@ -194,16 +196,16 @@ Let's make our time consuming operation return a promise instead calling a callb
 const MAX_SUCCESS_TIME = 4000
 
 const timeConsumingOperation = (id) => {
-  // Generate a random value between 1000 and 5000
-  // (used in interval)
+// Generate a random value between 1000 and 5000
+// (used in interval)
   const time = Math.round((Math.random() * 4000) + 1000)
 
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if (time < MAX_SUCCESS_TIME) resolve({id: id, time: time})
+return new Promise((resolve, reject) => {
+setTimeout(() => {
+if (time < MAX_SUCCESS_TIME) resolve({id: id, time: time})
       else                         reject ({id: id, time: time})
-    }, time)
-  })
+}, time)
+})
 }
 {% endhighlight %}
 
@@ -213,8 +215,8 @@ Now, let's handle the promise resolution:
 
 {% highlight javascript %}
 timeConsumingOperation(1)
-  .then((result) => console.log(`Operation finished successfully in ${result.time}ms`))
-  .catch((error) => console.log(`Operation ${error.id} failed: ${error.time}ms > ${MAX_SUCCESS_TIME}ms`))
+.then((result) => console.log(`Operation finished successfully in ${result.time}ms`))
+.catch((error) => console.log(`Operation ${error.id} failed: ${error.time}ms > ${MAX_SUCCESS_TIME}ms`))
 {% endhighlight %}
 
 A simple and clean solution :)
@@ -234,12 +236,12 @@ So, our *spaghetti* algorithm from the callback example can be simplified by thi
 
 {% highlight javascript %}
 Promise.all([
-  timeConsumingOperation(1),
-  timeConsumingOperation(2),
-  timeConsumingOperation(3)
+timeConsumingOperation(1),
+timeConsumingOperation(2),
+timeConsumingOperation(3)
 ])
 .then ((results) => {
-  results.forEach((result) => console.log(`Operation ${result.id} finished successfully in ${result.time}ms`))
+results.forEach((result) => console.log(`Operation ${result.id} finished successfully in ${result.time}ms`))
 })
 .catch((error) => console.log(`Operation ${error.id} failed: ${error.time}ms > ${MAX_SUCCESS_TIME}ms`))
 {% endhighlight %}

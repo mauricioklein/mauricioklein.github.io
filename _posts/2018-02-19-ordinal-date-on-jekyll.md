@@ -3,7 +3,9 @@ title: "How to use ordinal date on Jekyll?"
 date: 2018-02-19
 excerpt: Check here how to use ordinal date on Jekyll
 categories:
-- Jekyll
+  - Jekyll
+redirect_from:
+  - /jekyll/2018/02/19/ordinal-date-on-jekyll/
 ---
 
 I've been running my personal blog for more than three years now and, during this time, I've been relying on
@@ -60,9 +62,9 @@ Jekyll template.
 Basically, I've added the file `_includes/date.html` to my project, with the following content:
 
 {% highlight liquid %}
-  {% raw %}
-    {% assign date = include.date %}
-    {% assign format = include.format %}
+{% raw %}
+{% assign date = include.date %}
+{% assign format = include.format %}
 
     {% assign day = date | date: "%-d" %}
 
@@ -76,7 +78,7 @@ Basically, I've added the file `_includes/date.html` to my project, with the fol
     {% endcapture %}
 
     {{ date | date: format | replace: '%o', day_ordinal }}
-  {% endraw %}
+{% endraw %}
 {% endhighlight %}
 
 This template expects two parameters: the date to be formatted and the desired template.
@@ -92,9 +94,9 @@ Finally, to use this template, just add the following command, replacing `[date]
 by their respective values:
 
 {% highlight liquid %}
-  {% raw %}
-    {% include date.html date=[date] format=[format] %}
-  {% endraw %}
+{% raw %}
+{% include date.html date=[date] format=[format] %}
+{% endraw %}
 {% endhighlight %}
 
 This can be a little verbose compared to the plugin approach, but I think it's a good tradeoff, considering I don't have to bother about building the static files manually :)

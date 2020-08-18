@@ -6,6 +6,7 @@ categories:
   - Life in IT
 redirect_from:
   - /life/2015/11/18/farewell-zenvia/
+  - /life%20in%20it/2015/11/18/farewell-zenvia/
 ---
 Well, after 8 months working here at [Zenvia][zenvia-website], I'm leaving my current position for the constant search of new challenges and knowledge, this time at [Codeminer42][codeminer-website].
 

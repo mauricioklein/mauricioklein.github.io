@@ -3,7 +3,9 @@ title: "How to delete files with special characters on Linux?"
 date: 2016-01-26
 excerpt: After more than 8 years using Linux, sometimes I still got stuck at "unusual situations"...
 categories:
-- Linux
+  - Linux
+redirect_from:
+  - /linux/2016/01/26/how-delete-files-with-special-characters-on-linux/
 ---
 After more than 8 years using Linux day-by-day, sometimes I face some questions and problems that are completely new for me (I think this is the reason why I love Linux :P).
 

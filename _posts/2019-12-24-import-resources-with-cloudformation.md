@@ -3,7 +3,9 @@ title: "Importing IAM roles & policies with CloudFormation"
 date: 2019-12-24
 excerpt: So, CloudFormation now supports resource import. Let's try it out
 categories:
-- AWS
+  - AWS
+redirect_from:
+  - /aws/2019/12/24/import-resources-with-cloudformation/
 ---
 
 If you've been following my blog in the last months, you might remember my last post (you can read it [here][tf-import-post]), where I present an alternative of how to import manually created AWS resources using Terraform. One of the points I mentioned for using Terraform was because ~~I was willing to play with TF import~~ CloudFormation doesn't provide such feature: either you create your resources with CloudFormation since the beginning or you have to deal managing them manually (or recreate afterward using CF).
@@ -157,35 +159,35 @@ $ aws cloudformation describe-change-set --stack-name foobar --change-set-name I
 
 ```json
 {
-    "Changes": [
-        {
-            "Type": "Resource",
-            "ResourceChange": {
-                "Action": "Import",
-                "LogicalResourceId": "Role",
-                "PhysicalResourceId": "foobar",
-                "ResourceType": "AWS::IAM::Role",
-                "Scope": [],
-                "Details": []
-            }
-        }
-    ],
-    "ChangeSetName": "ImportRoleChangeSet",
-    "ChangeSetId": "[OMITTED]",
-    "StackId": "[OMITTED]",
-    "StackName": "foobar",
-    "Description": null,
-    "Parameters": null,
-    "CreationTime": "2019-12-22T22:30:02.743Z",
-    "ExecutionStatus": "AVAILABLE",
-    "Status": "CREATE_COMPLETE",
-    "StatusReason": null,
-    "NotificationARNs": [],
-    "RollbackConfiguration": {},
+  "Changes": [
+    {
+      "Type": "Resource",
+      "ResourceChange": {
+        "Action": "Import",
+        "LogicalResourceId": "Role",
+        "PhysicalResourceId": "foobar",
+        "ResourceType": "AWS::IAM::Role",
+        "Scope": [],
+        "Details": []
+      }
+    }
+  ],
+  "ChangeSetName": "ImportRoleChangeSet",
+  "ChangeSetId": "[OMITTED]",
+  "StackId": "[OMITTED]",
+  "StackName": "foobar",
+  "Description": null,
+  "Parameters": null,
+  "CreationTime": "2019-12-22T22:30:02.743Z",
+  "ExecutionStatus": "AVAILABLE",
+  "Status": "CREATE_COMPLETE",
+  "StatusReason": null,
+  "NotificationARNs": [],
+  "RollbackConfiguration": {},
     "Capabilities": [
         "CAPABILITY_NAMED_IAM"
     ],
-    "Tags": null
+  "Tags": null
 }
 ```
 
@@ -211,12 +213,12 @@ $ aws cloudformation describe-stack-drift-detection-status --stack-drift-detecti
 
 ```json
 {
-    "StackId": "[OMITTED]",
-    "StackDriftDetectionId": "[OMITTED]",
-    "StackDriftStatus": "IN_SYNC",
-    "DetectionStatus": "DETECTION_COMPLETE",
-    "DriftedStackResourceCount": 0,
-    "Timestamp": "2019-12-22T22:43:55.390Z"
+  "StackId": "[OMITTED]",
+  "StackDriftDetectionId": "[OMITTED]",
+  "StackDriftStatus": "IN_SYNC",
+  "DetectionStatus": "DETECTION_COMPLETE",
+  "DriftedStackResourceCount": 0,
+  "Timestamp": "2019-12-22T22:43:55.390Z"
 }
 ```
 
@@ -280,48 +282,48 @@ $ aws cloudformation describe-change-set --stack-name foobar --change-set-name I
 
 ```json
 {
-    "Changes": [
-        {
-            "Type": "Resource",
-            "ResourceChange": {
-                "Action": "Modify",
-                "LogicalResourceId": "Role",
-                "PhysicalResourceId": "foobar",
-                "ResourceType": "AWS::IAM::Role",
-                "Replacement": "False",
+  "Changes": [
+    {
+      "Type": "Resource",
+      "ResourceChange": {
+        "Action": "Modify",
+        "LogicalResourceId": "Role",
+        "PhysicalResourceId": "foobar",
+        "ResourceType": "AWS::IAM::Role",
+        "Replacement": "False",
                 "Scope": [
                     "Properties"
                 ],
-                "Details": [
-                    {
-                        "Target": {
-                            "Attribute": "Properties",
-                            "Name": "Policies",
-                            "RequiresRecreation": "Never"
-                        },
-                        "Evaluation": "Static",
-                        "ChangeSource": "DirectModification"
-                    }
-                ]
-            }
-        }
-    ],
-    "ChangeSetName": "ImportInlinePolicyChangeset",
-    "ChangeSetId": "[OMITTED]",
-    "StackId": "[OMITTED]",
-    "StackName": "foobar",
-    "Description": null,
-    "Parameters": null,
-    "CreationTime": "2019-12-22T23:03:19.154Z",
-    "ExecutionStatus": "AVAILABLE",
-    "Status": "CREATE_COMPLETE",
-    "StatusReason": null,
-    "NotificationARNs": [],
-    "RollbackConfiguration": {},
+        "Details": [
+          {
+            "Target": {
+              "Attribute": "Properties",
+              "Name": "Policies",
+              "RequiresRecreation": "Never"
+            },
+            "Evaluation": "Static",
+            "ChangeSource": "DirectModification"
+          }
+        ]
+      }
+    }
+  ],
+  "ChangeSetName": "ImportInlinePolicyChangeset",
+  "ChangeSetId": "[OMITTED]",
+  "StackId": "[OMITTED]",
+  "StackName": "foobar",
+  "Description": null,
+  "Parameters": null,
+  "CreationTime": "2019-12-22T23:03:19.154Z",
+  "ExecutionStatus": "AVAILABLE",
+  "Status": "CREATE_COMPLETE",
+  "StatusReason": null,
+  "NotificationARNs": [],
+  "RollbackConfiguration": {},
     "Capabilities": [
         "CAPABILITY_NAMED_IAM"
     ],
-    "Tags": null
+  "Tags": null
 }
 ```
 
@@ -416,35 +418,35 @@ $ aws cloudformation describe-change-set --stack-name foobar --change-set-name I
 
 ```json
 {
-    "Changes": [
-        {
-            "Type": "Resource",
-            "ResourceChange": {
-                "Action": "Import",
-                "LogicalResourceId": "UserManagedPolicy",
-                "PhysicalResourceId": "[OMITTED]",
-                "ResourceType": "AWS::IAM::ManagedPolicy",
-                "Scope": [],
-                "Details": []
-            }
-        }
-    ],
-    "ChangeSetName": "ImportUserManagedPolicyChangeSet",
-    "ChangeSetId": "[OMITTED]",
-    "StackId": "[OMITTED]",
-    "StackName": "foobar",
-    "Description": null,
-    "Parameters": null,
-    "CreationTime": "2019-12-23T09:20:42.378Z",
-    "ExecutionStatus": "AVAILABLE",
-    "Status": "CREATE_COMPLETE",
-    "StatusReason": null,
-    "NotificationARNs": [],
-    "RollbackConfiguration": {},
+  "Changes": [
+    {
+      "Type": "Resource",
+      "ResourceChange": {
+        "Action": "Import",
+        "LogicalResourceId": "UserManagedPolicy",
+        "PhysicalResourceId": "[OMITTED]",
+        "ResourceType": "AWS::IAM::ManagedPolicy",
+        "Scope": [],
+        "Details": []
+      }
+    }
+  ],
+  "ChangeSetName": "ImportUserManagedPolicyChangeSet",
+  "ChangeSetId": "[OMITTED]",
+  "StackId": "[OMITTED]",
+  "StackName": "foobar",
+  "Description": null,
+  "Parameters": null,
+  "CreationTime": "2019-12-23T09:20:42.378Z",
+  "ExecutionStatus": "AVAILABLE",
+  "Status": "CREATE_COMPLETE",
+  "StatusReason": null,
+  "NotificationARNs": [],
+  "RollbackConfiguration": {},
     "Capabilities": [
         "CAPABILITY_NAMED_IAM"
     ],
-    "Tags": null
+  "Tags": null
 }
 ```
 
@@ -467,22 +469,22 @@ $ aws cloudformation describe-stack-resource-drifts --stack-name foobar
 
 ```json
 {
-    "StackId": "[OMITTED]",
-    "LogicalResourceId": "UserManagedPolicy",
-    "PhysicalResourceId": "[OMITTED]",
-    "ResourceType": "AWS::IAM::ManagedPolicy",
-    "ExpectedProperties": "{\"ManagedPolicyName\":\"foobar-user-managed-policy\",\"PolicyDocument\":{\"Statement\":[{\"Action\":[\"s3:PutBucketTagging\",\"s3:DeleteObjectVersionTagging\",\"s3:PutObjectTagging\",\"s3:ReplicateTags\",\"s3:PutObjectVersionTagging\"],\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"2012-10-17\"}}",
-    "ActualProperties": "{\"ManagedPolicyName\":\"foobar-user-managed-policy\",\"PolicyDocument\":{\"Statement\":[{\"Action\":[\"s3:PutBucketTagging\",\"s3:DeleteObjectVersionTagging\",\"s3:PutObjectTagging\",\"s3:ReplicateTags\",\"s3:PutObjectVersionTagging\",\"s3:DeleteObjectTagging\"],\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"2012-10-17\"}}",
-    "PropertyDifferences": [
-        {
-            "PropertyPath": "/PolicyDocument/Statement/0/Action/5",
-            "ExpectedValue": "null",
-            "ActualValue": "s3:DeleteObjectTagging",
-            "DifferenceType": "ADD"
-        }
-    ],
-    "StackResourceDriftStatus": "MODIFIED",
-    "Timestamp": "2019-12-23T16:13:12.280Z"
+  "StackId": "[OMITTED]",
+  "LogicalResourceId": "UserManagedPolicy",
+  "PhysicalResourceId": "[OMITTED]",
+  "ResourceType": "AWS::IAM::ManagedPolicy",
+  "ExpectedProperties": "{\"ManagedPolicyName\":\"foobar-user-managed-policy\",\"PolicyDocument\":{\"Statement\":[{\"Action\":[\"s3:PutBucketTagging\",\"s3:DeleteObjectVersionTagging\",\"s3:PutObjectTagging\",\"s3:ReplicateTags\",\"s3:PutObjectVersionTagging\"],\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"2012-10-17\"}}",
+  "ActualProperties": "{\"ManagedPolicyName\":\"foobar-user-managed-policy\",\"PolicyDocument\":{\"Statement\":[{\"Action\":[\"s3:PutBucketTagging\",\"s3:DeleteObjectVersionTagging\",\"s3:PutObjectTagging\",\"s3:ReplicateTags\",\"s3:PutObjectVersionTagging\",\"s3:DeleteObjectTagging\"],\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"2012-10-17\"}}",
+  "PropertyDifferences": [
+    {
+      "PropertyPath": "/PolicyDocument/Statement/0/Action/5",
+      "ExpectedValue": "null",
+      "ActualValue": "s3:DeleteObjectTagging",
+      "DifferenceType": "ADD"
+    }
+  ],
+  "StackResourceDriftStatus": "MODIFIED",
+  "Timestamp": "2019-12-23T16:13:12.280Z"
 }
 ```
 
@@ -555,15 +557,15 @@ $ aws cloudformation describe-stack-resource-drifts --stack-name foobar
 
 ```json
 {
-    "StackId": "[OMITTED]",
-    "LogicalResourceId": "UserManagedPolicy",
-    "PhysicalResourceId": "[OMITTED]",
-    "ResourceType": "AWS::IAM::ManagedPolicy",
-    "ExpectedProperties": "{\"ManagedPolicyName\":\"foobar-user-managed-policy\",\"PolicyDocument\":{\"Statement\":[{\"Action\":[\"s3:PutBucketTagging\",\"s3:DeleteObjectVersionTagging\",\"s3:PutObjectTagging\",\"s3:ReplicateTags\",\"s3:PutObjectVersionTagging\",\"s3:DeleteObjectTagging\"],\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"2012-10-17\"}}",
-    "ActualProperties": "{\"ManagedPolicyName\":\"foobar-user-managed-policy\",\"PolicyDocument\":{\"Statement\":[{\"Action\":[\"s3:PutBucketTagging\",\"s3:DeleteObjectVersionTagging\",\"s3:PutObjectTagging\",\"s3:ReplicateTags\",\"s3:PutObjectVersionTagging\",\"s3:DeleteObjectTagging\"],\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"2012-10-17\"}}",
-    "PropertyDifferences": [],
-    "StackResourceDriftStatus": "IN_SYNC",
-    "Timestamp": "2019-12-23T16:20:17.461Z"
+  "StackId": "[OMITTED]",
+  "LogicalResourceId": "UserManagedPolicy",
+  "PhysicalResourceId": "[OMITTED]",
+  "ResourceType": "AWS::IAM::ManagedPolicy",
+  "ExpectedProperties": "{\"ManagedPolicyName\":\"foobar-user-managed-policy\",\"PolicyDocument\":{\"Statement\":[{\"Action\":[\"s3:PutBucketTagging\",\"s3:DeleteObjectVersionTagging\",\"s3:PutObjectTagging\",\"s3:ReplicateTags\",\"s3:PutObjectVersionTagging\",\"s3:DeleteObjectTagging\"],\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"2012-10-17\"}}",
+  "ActualProperties": "{\"ManagedPolicyName\":\"foobar-user-managed-policy\",\"PolicyDocument\":{\"Statement\":[{\"Action\":[\"s3:PutBucketTagging\",\"s3:DeleteObjectVersionTagging\",\"s3:PutObjectTagging\",\"s3:ReplicateTags\",\"s3:PutObjectVersionTagging\",\"s3:DeleteObjectTagging\"],\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"2012-10-17\"}}",
+  "PropertyDifferences": [],
+  "StackResourceDriftStatus": "IN_SYNC",
+  "Timestamp": "2019-12-23T16:20:17.461Z"
 }
 ```
 
@@ -641,20 +643,20 @@ However, if you check the `IAM::Role` drift detection output, you'll see a drift
 
 ```json
 {
-    "StackId": "[OMITTED]",
-    "LogicalResourceId": "Role",
-    "PhysicalResourceId": "foobar",
-    "ResourceType": "AWS::IAM::Role",
-    "PropertyDifferences": [
-        {
-            "PropertyPath": "/ManagedPolicyArns/1",
-            "ExpectedValue": "null",
-            "ActualValue": "arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess",
-            "DifferenceType": "ADD"
-        }
-    ],
-    "StackResourceDriftStatus": "MODIFIED",
-    "Timestamp": "2019-12-23T17:20:18.721Z"
+  "StackId": "[OMITTED]",
+  "LogicalResourceId": "Role",
+  "PhysicalResourceId": "foobar",
+  "ResourceType": "AWS::IAM::Role",
+  "PropertyDifferences": [
+    {
+      "PropertyPath": "/ManagedPolicyArns/1",
+      "ExpectedValue": "null",
+      "ActualValue": "arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess",
+      "DifferenceType": "ADD"
+    }
+  ],
+  "StackResourceDriftStatus": "MODIFIED",
+  "Timestamp": "2019-12-23T17:20:18.721Z"
 }
 ```
 
@@ -771,13 +773,13 @@ $ aws cloudformation describe-stack-resource-drifts --stack-name foobar
 
 ```json
 {
-    "StackId": "[OMITTED]",
-    "LogicalResourceId": "Role",
-    "PhysicalResourceId": "foobar",
-    "ResourceType": "AWS::IAM::Role",
-    "PropertyDifferences": [],
-    "StackResourceDriftStatus": "IN_SYNC",
-    "Timestamp": "2019-12-23T17:30:25.119Z"
+  "StackId": "[OMITTED]",
+  "LogicalResourceId": "Role",
+  "PhysicalResourceId": "foobar",
+  "ResourceType": "AWS::IAM::Role",
+  "PropertyDifferences": [],
+  "StackResourceDriftStatus": "IN_SYNC",
+  "Timestamp": "2019-12-23T17:30:25.119Z"
 }
 ```
 

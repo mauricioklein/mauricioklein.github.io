@@ -3,7 +3,9 @@ title: "What's new in Ruby 2.4.0?"
 date: 2016-08-06
 excerpt: Ruby 2.4.0 is still on the oven, but we can check what's coming on...
 categories:
-- Ruby
+  - Ruby
+redirect_from:
+  - /ruby/2016/08/06/what-is-new-in-ruby-2-4-0/
 ---
 Ruby 2.4.0 is coming and, since an official release is still on the oven, we can play around with new improvements in the [preview1][preview1], released a couple of months ago.
 
@@ -30,17 +32,17 @@ _Fixnum and Bignum_ are now just aliases to _Integer_. Check it out:
 
 {% highlight ruby %}
 2.4.0-preview1 :014 > Bignum
- => Integer
+=> Integer
 2.4.0-preview1 :015 > Fixnum
- => Integer
+=> Integer
 2.4.0-preview1 :016 > 123.class
- => Integer
+=> Integer
 2.4.0-preview1 :017 > 100_000_000_000_000_000_000.class
- => Integer
+=> Integer
 2.4.0-preview1 :018 > 123.is_a? Integer
- => true
+=> true
 2.4.0-preview1 :019 > 123.is_a? Fixnum
- => true
+=> true
 {% endhighlight %}
 
 _______
@@ -55,11 +57,11 @@ Now, case conversion methods (like _upcase_, _downcase_, _capitalize_, etc) work
 
 {% highlight ruby %}
 2.4.0-preview1 :020 > "época".upcase
- => "ÉPOCA"
+=> "ÉPOCA"
 2.4.0-preview1 :021 > "época".downcase
- => "época"
+=> "época"
 2.4.0-preview1 :022 > "época".capitalize
- => "Época"
+=> "Época"
 {% endhighlight %}
 
 _______
@@ -71,13 +73,13 @@ Ruby 2.4.0 incorporates a bug fix fixing this behaviour. Check it out:
 
 {% highlight ruby %}
 2.4.0-preview1 :041 > offset = 3.0 / 24 # Timezone: +03:00
- => 0.125
+=> 0.125
 2.4.0-preview1 :042 > dt = DateTime.new.new_offset(offset)
- => #<DateTime: -4712-01-01T03:00:00+03:00 ((0j,0s,0n),+10800s,2299161j)>
+=> #<DateTime: -4712-01-01T03:00:00+03:00 ((0j,0s,0n),+10800s,2299161j)>
 2.4.0-preview1 :043 > dt.zone
- => "+03:00"
+=> "+03:00"
 2.4.0-preview1 :044 > dt.to_time
- => -4712-01-01 03:00:00 +0300
+=> -4712-01-01 03:00:00 +0300
 {% endhighlight %}
 
 _______

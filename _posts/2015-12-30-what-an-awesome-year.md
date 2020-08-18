@@ -6,6 +6,7 @@ categories:
   - Life in IT
 redirect_from:
   - /life/2015/12/30/what-an-awesome-year/
+  - /life%20in%20it/2015/12/30/what-an-awesome-year/
 ---
 Well, 2015 is ending and, surely, I can say that this year was awesome.
 

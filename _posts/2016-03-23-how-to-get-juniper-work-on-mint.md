@@ -3,7 +3,9 @@ title: "How to get Juniper working on Mint?"
 date: 2016-03-23
 excerpt: After a long time banging my head against Juniper, finally it's working on Mint...
 categories:
-- Linux
+  - Linux
+redirect_from:
+  - /linux/2016/03/23/how-to-get-juniper-work-on-mint/
 ---
 I'm currently working in a project were the client imposes the use of _VPN_ (using _Juniper_) to access its intranet.
 

@@ -3,8 +3,11 @@ title: "How to change ORM in Padrino project"
 date: 2015-07-26
 excerpt: Have a Padrino project and wanna change ORM?! Check here how to do that...
 categories:
-- Ruby
+  - Ruby
+redirect_from:
+  - /ruby/2015/07/26/change-orm-padrino/
 ---
+
 I'm currently developing my graduation thesis (yeah, the end is near \o/).
 
 I've decided to use this opportunity to explore a new technology, and the chosen one was **Padrino**.
@@ -69,18 +72,18 @@ And then, preparing database to receive our models:
 # Edit config/database.rb to point to our Postgres database.
 # (Here, 'postgres' points to my Postgres database IP. Change it to match your reality)
 ActiveRecord::Base.configurations[:development] = {
-  :adapter => 'sqlite3',
-  :database => Padrino.root('postgres', 'padrino_orm_poc_development.db')
+:adapter => 'sqlite3',
+:database => Padrino.root('postgres', 'padrino_orm_poc_development.db')
 }
 
 ActiveRecord::Base.configurations[:production] = {
-  :adapter => 'sqlite3',
-  :database => Padrino.root('postgres', 'padrino_orm_poc_production.db')
+:adapter => 'sqlite3',
+:database => Padrino.root('postgres', 'padrino_orm_poc_production.db')
 }
 
 ActiveRecord::Base.configurations[:test] = {
-  :adapter => 'sqlite3',
-  :database => Padrino.root('postgres', 'padrino_orm_poc_test.db')
+:adapter => 'sqlite3',
+:database => Padrino.root('postgres', 'padrino_orm_poc_test.db')
 }
 
 # Create database schema for the three environments:
@@ -95,12 +98,12 @@ Now, we need to implement our models. So, here they are:
 {% highlight ruby %}
 # User Model
 class User < ActiveRecord::Base
-  has_many :posts
+has_many :posts
 end
 
 # Post Model
 class Post < ActiveRecord::Base
-  belongs_to :user
+belongs_to :user
 end
 {% endhighlight %}
 
@@ -117,10 +120,10 @@ So, here is the test code (_spec/models/user.rb_):
 require 'spec_helper'
 
 RSpec.describe User do
-  context 'Create a new user' do
-    it 'with posts' do
-      user = User.new(name: 'John', age: 25)
-      user.save!
+context 'Create a new user' do
+it 'with posts' do
+user = User.new(name: 'John', age: 25)
+user.save!
 
       post_1 = Post.new(title: 'Post title 1', content: 'Post 1 content')
       post_2 = Post.new(title: 'Post title 2', content: 'Post 2 content')
@@ -135,7 +138,7 @@ RSpec.describe User do
       user = User.find(user.id)
       expect(user.posts.length).to eq(3)
     end
-  end
+end
 end
 {% endhighlight %}
 
@@ -147,16 +150,16 @@ $ rspec
 Pending: (Failures listed here are expected and do not affect your suite's status)
 
   1) Post add some examples to (or delete) /root/padrino/padrino_orm_poc/spec/models/post_spec.rb
-     # Not yet implemented
-     # ./spec/models/post_spec.rb:4
+   # Not yet implemented
+   # ./spec/models/post_spec.rb:4
 
 Failures:
 
   1) User Create a new user with posts
-     Failure/Error: user.posts << post_1
-     ActiveModel::MissingAttributeError:
-       can't write unknown attribute `user_id`
-{% endhighlight %}
+   Failure/Error: user.posts << post_1
+   ActiveModel::MissingAttributeError:
+   can't write unknown attribute `user_id`
+   {% endhighlight %}
 
 Of course, we forgot to add an _user_id_ column on the Post's table, so the association is invalid.
 
@@ -168,9 +171,9 @@ padrino g migration AddUserIdToModel
 
 # ...set migration's content...
 class AddUserIdToModel < ActiveRecord::Migration
-  def change
-    add_reference :posts, :user, index: true
-  end
+def change
+add_reference :posts, :user, index: true
+end
 end
 
 # ...and run migration in all 3 environments
@@ -189,7 +192,7 @@ Pending: (Failures listed here are expected and do not affect your suite's statu
   1) Post add some examples to (or delete) /root/padrino/padrino_orm_poc/spec/models/post_spec.rb
      # Not yet implemented
      # ./spec/models/post_spec.rb:4
-{% endhighlight %}
+   {% endhighlight %}
 
 It's saying that Post tests are missing. That's OK, because our test is implemented in User spec.
 So, just delete _spec/models/post_spec.rb_ and run _rspec_ again:
@@ -256,23 +259,23 @@ So, create the _config/mongoid.yml_ file with the following content:
 # Here, I have 'mongo' pointing to my MongoID database IP
 # (Change this value to match your reality).
 development:
-  sessions:
-    default:
-      database: mongoid
+sessions:
+default:
+database: mongoid
       hosts:
         - mongo:27017
 
 test:
-  sessions:
-    default:
-      database: mongoid
+sessions:
+default:
+database: mongoid
       hosts:
         - mongo:27017
 
 production:
-  sessions:
-    default:
-      database: mongoid
+sessions:
+default:
+database: mongoid
       hosts:
         - mongo:27017
 {% endhighlight %}
@@ -303,30 +306,30 @@ Let's do it:
 {% highlight ruby %}
 # Old User Model:
 class User < ActiveRecord::Base
-  has_many :posts
+has_many :posts
 end
 
 # New User Model
 class User
-  include Mongoid::Document
-  field :name, type: String
-  field :age, type: Integer
+include Mongoid::Document
+field :name, type: String
+field :age, type: Integer
 
-  embeds_many :posts
+embeds_many :posts
 end
 
 # Old Post Model:
 class Post < ActiveRecord::Base
-  belongs_to :user
+belongs_to :user
 end
 
 # New Post Model:
 class Post
-  include Mongoid::Document
-  field :title, type: String
-  field :content, type: String
+include Mongoid::Document
+field :title, type: String
+field :content, type: String
 
-  embedded_in :user
+embedded_in :user
 end
 {% endhighlight %}
 

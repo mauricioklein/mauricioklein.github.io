@@ -3,7 +3,9 @@ title: "Forget the monkey patch: an introduction to Refinement"
 date: 2016-11-22
 excerpt: Check here how to do monkey patching without monkey patching
 categories:
-- Ruby
+  - Ruby
+redirect_from:
+  - /ruby/2016/11/22/ruby-refine/
 ---
 One of the biggest problems in Ruby always was the impossibility to redefine class methods. Popular in many other languages, such practice was made possible in Ruby using a <i>workaround</i>: monkey patching
 
@@ -17,15 +19,15 @@ Let's take an example:
 
 {% highlight ruby %}
 class Cow
-  def say
-    puts 'Moo'.upcase
-  end
+def say
+puts 'Moo'.upcase
+end
 end
 
 class Dog
-  def say
-    puts 'Roof'.upcase
-  end
+def say
+puts 'Roof'.upcase
+end
 end
 
 cow = Cow.new
@@ -41,9 +43,9 @@ However, let's say that, for some reason, you've defined the following snippet s
 
 {% highlight ruby %}
 class String
-  def upcase
-    self.reverse
-  end
+def upcase
+self.reverse
+end
 end
 {% endhighlight %}
 
@@ -76,11 +78,11 @@ So, check the module below:
 
 {% highlight ruby %}
 module StringRefinement
-  refine String do
-    def upcase
-      self.reverse
-    end
-  end
+refine String do
+def upcase
+self.reverse
+end
+end
 end
 
 cow.say # => "MOO"
@@ -104,11 +106,11 @@ For example: if you want to turn your `Cow` class in a `CrazyCow`, you can just 
 
 {% highlight ruby %}
 class CrazyCow
-  using StringRefinement
+using StringRefinement
 
-  def say
-    puts 'Moo'.upcase
-  end
+def say
+puts 'Moo'.upcase
+end
 end
 
 crazycow = CrazyCow.new

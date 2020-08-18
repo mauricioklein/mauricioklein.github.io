@@ -3,7 +3,9 @@ title: "Multi-node K8s cluster... without nodes! WHAAAT?"
 date: 2019-09-13
 excerpt: K8s cluster without nodes? Are you nuts? Hold your horses...
 categories:
-- Kubernetes
+  - Kubernetes
+redirect_from:
+  - /kubernetes/2019/09/13/k8s-in-docker/
 ---
 
 When I started using K8s, some years ago, it was pretty hard to find a cluster to run my experiments. Basically, the way to go was using Minikube. I don't know if it was me, but I never got lucky with Minikube: every time I tried using it, I ended spending more time setting up the environment than actually using it.
@@ -54,10 +56,10 @@ Kind allows you to describe your cluster in a config file. So, for a cluster wit
 kind: Cluster
 apiVersion: kind.sigs.k8s.io/v1alpha3
 nodes:
-- role: control-plane
-- role: control-plane
-- role: worker
-- role: worker
+  - role: control-plane
+  - role: control-plane
+  - role: worker
+  - role: worker
 ```
 
 And the command to create the cluster becomes:

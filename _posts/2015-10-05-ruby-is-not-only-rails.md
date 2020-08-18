@@ -3,7 +3,9 @@ title: "Ruby isn't only Rails"
 date: 2015-10-05
 excerpt: When you hear 'Ruby', you always remember 'Rails'? You should read this post...
 categories:
-- Ruby
+  - Ruby
+redirect_from:
+  - /ruby/2015/10/05/ruby-is-not-only-rails/
 ---
 Since the release of Rails framework, Ruby became the _language of the moment_. The easiness to create a complete web application in a short period of time and with low effort drove Rails to the top of rank, leading startups to exhaustively use it to create their prototypes and evolving them to a full product. Even big companies, such _Twitter_ and _Shopify_ have been benefited with the _new kid on the block_.
 
@@ -44,7 +46,7 @@ So, the equivalent Sinatra code is:
 
 {% highlight ruby %}
 get '/hello/:name' do
-   puts "Hello #{name}"
+puts "Hello #{name}"
 end
 {% endhighlight %}
 
@@ -52,7 +54,7 @@ end
 
 {% highlight ruby %}
 post '/sinatra/' do
-   puts "Sinatra Rocks!"
+puts "Sinatra Rocks!"
 end
 {% endhighlight %}
 
@@ -113,12 +115,12 @@ get '/', to: 'home#index'
 
 # Implementing the route handler
 module Web::Controllers::Home
-  class Index
-    include Web::Action
+class Index
+include Web::Action
 
     def call(params)
     end
-  end
+end
 end
 {% endhighlight %}
 

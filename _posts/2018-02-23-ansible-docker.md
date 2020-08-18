@@ -3,8 +3,10 @@ title: "Playing with Ansible... on Docker"
 date: 2018-02-23
 excerpt: Why bother creating Amazon VMs when you have Docker?
 categories:
-- Ansible
-- Docker
+  - Ansible
+  - Docker
+redirect_from:
+  - /ansible/docker/2018/02/23/ansible-docker/
 ---
 
 (*TL;DR: The project presented here, with all the necessary files and setup steps,
@@ -33,10 +35,10 @@ So, before starting, we need to define the architecture and the roles of each co
 On this project, we'll have four Docker containers running:
 
 - One container with `Ansible` installed. This will be our "master" machine, responsible to provision
-the other ones.
+  the other ones.
 
 - Three clean containers, with only `sshd` (*ssh deamon*) installed and configured. These containers will play
-the role of servers, it means, the machines that will actually be prepared to run our service.
+  the role of servers, it means, the machines that will actually be prepared to run our service.
 
 Also, we need some service to test that our servers are well configured and ready to use. So, we're going to use [this project][hello-world], which is a simple "hello world" written in NodeJS that I found on Github.
 
