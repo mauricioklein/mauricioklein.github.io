@@ -4,8 +4,8 @@
 # ---------------------------------------------------------------
 
 # Site
-title: Mauricio Klein's Blog
-subtitle: Software Development Engineer @ AWS
+title: mklein.io
+subtitle: Cloud computing & beyond
 description: Programming hints, code snippets, life as an engineer and anything else worth sharing
 author: Mauricio Klein
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
@@ -14,7 +14,7 @@ date_format: '%B %o, %Y'
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com' and baseurl as '/child'
-url: https://mauricioklein.com
+url: https://mklein.io
 baseurl:
 permalink: /:year/:month/:day/:title/
 
@@ -240,7 +240,7 @@ social_icons:
   # Icon Mappings.
   # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
   GitHub: mauricioklein
-  Twitter: Mauricio_Klein
+  Twitter: mkleinio
   # Weibo: weibo
 
 

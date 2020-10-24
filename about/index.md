@@ -29,8 +29,12 @@ My main interests are:
 If you're looking for a skilled engineer for your project or just want to chat about technology,
 you can reach me on [Github][github], [Twitter][twitter] or [Linkedin][linkedin].
 
+<div class="post-spread">
+    {% include _partials/buy-me-a-coffee/button.html %}
+</div>
+
 ---
 
 [github]: https://github.com/mauricioklein
-[twitter]: https://twitter.com/Mauricio_Klein
+[twitter]: https://twitter.com/mkleinio
 [linkedin]: https://www.linkedin.com/in/mauricioklein
