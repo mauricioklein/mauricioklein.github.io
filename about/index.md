@@ -13,6 +13,8 @@ I'm **Mauricio Klein**, software engineer with more than 12 years of experience 
 > **AWS Certified Solutions Architect - Associate (SSA)** since April/2019.
 >
 > **AWS Certified Developer - Associate (DVA)** since April/2020.
+>
+> **AWS Certified SysOps Administrator - Associate (SOA)** since November/2020.
 
 I'm specialized in backend systems, acting as a team lead in the last years. 
 
