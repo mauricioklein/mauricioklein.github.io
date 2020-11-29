@@ -40,8 +40,7 @@ exclude: [
   "changelog.md",
   "Gemfile",
   "Gemfile.lock",
-  "README_en.md",
-  "letterboard/node_modules/"
+  "README_en.md"
 ]
 
 # Separator
