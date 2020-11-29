@@ -9,7 +9,8 @@ $buy-me-a-coffee-bg: #666666;
 .switch {
   position: fixed;
   top: 1px;
-  right: 1px;  
+  right: 1px;
+  z-index: 100; // Make sure the dark mode toggle isn't overlapped by header on small screens
 }
 
 .inner-switch {
