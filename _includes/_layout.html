@@ -29,6 +29,8 @@
   <div class="{{ container_class }} {{ page_class }} ">
     <div class="headband"></div>
 
+    {% include _blocks/mode-toggle.html %}
+
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"> {% include _partials/header.html %} </div>
     </header>
@@ -69,6 +71,8 @@
 
   {% include _scripts/vendors.html %}
   {% include _scripts/commons.html %}
+  {% include _scripts/dark-mode.html %}
+
 
   {% assign scheme_script = '_scripts/schemes/' | append: site.scheme | downcase | append: '.html' %}
   {% include {{ scheme_script }} %}
