@@ -100,6 +100,11 @@ html.dark-mode {
     }
   }
 
+  // Menu popup on mobile devices
+  .site-nav {
+    background-color: $body-bg-color;
+  }
+
   // buy me a coffee button
   .bmc-btn-container {
     a {
