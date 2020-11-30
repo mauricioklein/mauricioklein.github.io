@@ -13,7 +13,7 @@ $(SELECTOR).on("click", function() {
 
 function toggleDarkMode() {
   const mode = getCookie("mode") === DARK_MODE ? LIGHT_MODE : DARK_MODE;
-  document.cookie = `mode=${mode}; path=/`;
+  document.cookie = `mode=${mode}; path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT`;
   
   if (mode === DARK_MODE) {
     $("html").addClass("dark-mode");
