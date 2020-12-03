@@ -115,4 +115,14 @@ html.dark-mode {
       background-color: $buy-me-a-coffee-bg !important;
     }
   }
+
+  .post-body {
+    tr {
+      background-color: transparent;
+    }
+
+    tr:nth-child(odd) {
+      background-color:#303030;
+    }
+  }
 }
