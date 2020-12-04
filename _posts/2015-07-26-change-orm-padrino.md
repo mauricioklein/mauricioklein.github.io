@@ -397,4 +397,4 @@ And, if nothing else works, well, just leave the gun and take the cannoli.
 
 [padrino-website]: http://www.padrinorb.com/
 [sinatra-website]: http://www.sinatrarb.com/
-[padrino-project]: https://github.com/mauricio-klein-blog-examples/padrino-orm-poc
+[padrino-project]: https://github.com/mkleinio/padrino-orm-poc

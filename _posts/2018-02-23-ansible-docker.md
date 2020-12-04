@@ -320,7 +320,7 @@ $ chmod 644 ~/.ssh/config
 [ansible-galaxy]: https://galaxy.ansible.com/
 [hello-world]: https://github.com/azat-co/nodejs-hello-world
 [dehaan]: https://github.com/mpdehaan
-[code-repo]: https://github.com/mauricio-klein-blog-examples/ansible-docker
+[code-repo]: https://github.com/mkleinio/ansible-docker
 
 [filesystem]: {{site.url}}/assets/images/posts_images/ansible-docker/filesystem.png
 [compose-run]: {{site.url}}/assets/images/posts_images/ansible-docker/compose-run.png

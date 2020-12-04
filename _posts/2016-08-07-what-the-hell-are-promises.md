@@ -265,4 +265,4 @@ write (or even rewrite) your algorithms in a much cleaner and maintainable way.
 > All the examples presented here are available on [GitHub][github-project]
 
 [promise-website]: https://www.promisejs.org/api/
-[github-project]: https://github.com/mauricio-klein-blog-examples/promises-js
+[github-project]: https://github.com/mkleinio/promises-js
