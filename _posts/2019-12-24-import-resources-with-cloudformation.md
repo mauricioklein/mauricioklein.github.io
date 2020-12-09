@@ -910,8 +910,8 @@ However, this is a big step for CloudFormation, since it addresses a limitation 
 
 Worth keeping an eye on Resource Import, since it can be of great help moving existing legacy infrastructure to IaC, something mandatory nowadays.
 
-[tf-import-post]: {{site.url}}/terraform/2019/09/30/terraform-import-role-policy
-[role-manual-setup]: {{site.url}}/assets/images/posts_images/cf-import/manual-setup.png
-[role-changeset]: {{site.url}}/assets/images/posts_images/cf-import/role-changeset.png
-[role-imported]: {{site.url}}/assets/images/posts_images/cf-import/role-imported.png
-[user-managed-policy-imported]: {{site.url}}/assets/images/posts_images/cf-import/user-managed-policy-imported.png
+[tf-import-post]:               {{site.url}}/terraform/2019/09/30/terraform-import-role-policy
+[role-manual-setup]:            https://user-images.githubusercontent.com/11538662/101628958-e4632780-3a20-11eb-8022-28450d364c8d.png
+[role-changeset]:               https://user-images.githubusercontent.com/11538662/101628967-e6c58180-3a20-11eb-8b5b-1e491b86e04e.png
+[role-imported]:                https://user-images.githubusercontent.com/11538662/101628968-e75e1800-3a20-11eb-823a-83a2c77ec28c.png
+[user-managed-policy-imported]: https://user-images.githubusercontent.com/11538662/101628970-e75e1800-3a20-11eb-8632-d01e57b9bfe9.png

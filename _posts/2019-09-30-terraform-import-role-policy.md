@@ -456,20 +456,20 @@ Now that the experiment is over, you can delete the role and policies created. S
 $ terraform destroy -auto-approve
 ```
 
-[cf-role-policy]: {{site.url}}/assets/images/posts_images/terraform-role-import/cf-role-policy.png
+[cf-role-policy]: https://user-images.githubusercontent.com/11538662/101628301-e7a9e380-3a1f-11eb-8d73-e4107b7b0793.png
 
-[role-plan-before]: {{site.url}}/assets/images/posts_images/terraform-role-import/role/plan-before.png
-[role-plan-after]: {{site.url}}/assets/images/posts_images/terraform-role-import/role/plan-after.png
+[role-plan-before]: https://user-images.githubusercontent.com/11538662/101628314-eaa4d400-3a1f-11eb-949f-15d253f77f4f.png
+[role-plan-after]:  https://user-images.githubusercontent.com/11538662/101628313-eaa4d400-3a1f-11eb-9f52-bb9f7d6941db.png
 
-[aws-managed-policy-plan]: {{site.url}}/assets/images/posts_images/terraform-role-import/aws-managed-policy/plan.png
+[aws-managed-policy-plan]: https://user-images.githubusercontent.com/11538662/101628296-e5e02000-3a1f-11eb-9591-e1fe645bcb98.png
 
-[user-managed-policy-plan-before]: {{site.url}}/assets/images/posts_images/terraform-role-import/user-managed-policy/plan-before.png
-[user-managed-policy-plan-after]: {{site.url}}/assets/images/posts_images/terraform-role-import/user-managed-policy/plan-after.png
-[user-managed-policy-plan-after-attachment]: {{site.url}}/assets/images/posts_images/terraform-role-import/user-managed-policy/plan-after-attachment.png
+[user-managed-policy-plan-before]:           https://user-images.githubusercontent.com/11538662/101628320-ebd60100-3a1f-11eb-8160-caa03275b5e9.png
+[user-managed-policy-plan-after]:            https://user-images.githubusercontent.com/11538662/101628319-ebd60100-3a1f-11eb-9bd1-fa81331dc8c6.png
+[user-managed-policy-plan-after-attachment]: https://user-images.githubusercontent.com/11538662/101628318-eb3d6a80-3a1f-11eb-826b-f526147c570a.png
 
-[inline-policy-plan-before]: {{site.url}}/assets/images/posts_images/terraform-role-import/inline-policy/plan-before.png
-[inline-policy-plan-after]: {{site.url}}/assets/images/posts_images/terraform-role-import/inline-policy/plan-after.png
+[inline-policy-plan-before]: https://user-images.githubusercontent.com/11538662/101628308-e973a700-3a1f-11eb-9863-dbadd58b026c.png
+[inline-policy-plan-after]:  https://user-images.githubusercontent.com/11538662/101628304-e8db1080-3a1f-11eb-911c-8f6b32311162.png
 
-[tf-plan-after-all]: {{site.url}}/assets/images/posts_images/terraform-role-import/tf-plan-after-all.png
-[tf-apply]: {{site.url}}/assets/images/posts_images/terraform-role-import/tf-apply.png
-[new-resources]: {{site.url}}/assets/images/posts_images/terraform-role-import/new-resources.png
+[tf-plan-after-all]: https://user-images.githubusercontent.com/11538662/101628316-eb3d6a80-3a1f-11eb-8b00-e94a8605b3a0.png
+[tf-apply]: https://user-images.githubusercontent.com/11538662/101628315-eaa4d400-3a1f-11eb-8c16-cdb8044a116f.png
+[new-resources]: https://user-images.githubusercontent.com/11538662/101628309-ea0c3d80-3a1f-11eb-8908-c4bcfee6f8df.png

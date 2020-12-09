@@ -79,6 +79,6 @@ for being so generous with me so far :)
 ![][frohes-neues-jahr]
 ***Frohes neues Jahr allerseits***!!!
 
-[graduation-photo]: {{site.url}}/assets/images/posts_images/graduation.jpg
-[bag-photo]: {{site.url}}/assets/images/posts_images/bag.jpg
-[frohes-neues-jahr]: {{site.url}}/assets/images/posts_images/frohes-neues-jahr-deutsch.jpg
+[graduation-photo]: https://user-images.githubusercontent.com/11538662/101625103-415bdf00-3a1b-11eb-9c40-6c568c321b3c.jpg
+[bag-photo]: https://user-images.githubusercontent.com/11538662/101625093-3dc85800-3a1b-11eb-8243-0b08581530c2.jpg
+[frohes-neues-jahr]: https://user-images.githubusercontent.com/11538662/101625100-40c34880-3a1b-11eb-9949-b4fb13159405.jpg

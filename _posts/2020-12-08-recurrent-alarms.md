@@ -256,8 +256,8 @@ Although, for a very first layer of notification, the two solutions presented he
 - [Step Functions Iterate Pattern](https://docs.aws.amazon.com/step-functions/latest/dg/tutorial-create-iterate-pattern-section.html)
 - [Improved management of Amazon CloudWatch Alarms using AWS Systems Manager OpsCenter](https://aws.amazon.com/blogs/mt/improved-management-amazon-cloudwatch-alarms-using-aws-systems-manager-opscenter/)
 
-[diagram-foundation]: {{site.url}}/assets/images/posts_images/recurrent-alarm/diagram-foundation.png
-[diagram-sqs]: {{site.url}}/assets/images/posts_images/recurrent-alarm/diagram-sqs.png
-[diagram-sf]: {{site.url}}/assets/images/posts_images/recurrent-alarm/diagram-sf.png
-[sm-sqs]: {{site.url}}/assets/images/posts_images/recurrent-alarm/state-machine-sqs.png
-[sm-sf]: {{site.url}}/assets/images/posts_images/recurrent-alarm/state-machine-sf.png
+[diagram-foundation]: https://user-images.githubusercontent.com/11538662/101629226-52a7ea00-3a21-11eb-9842-8735908d344b.png
+[diagram-sqs]:        https://user-images.githubusercontent.com/11538662/101629235-550a4400-3a21-11eb-86d1-31fc47a8c1c3.png
+[diagram-sf]:         https://user-images.githubusercontent.com/11538662/101629233-53d91700-3a21-11eb-860e-741dd14bb3f9.png
+[sm-sqs]:             https://user-images.githubusercontent.com/11538662/101629244-576c9e00-3a21-11eb-937b-e505f0e06fcf.png
+[sm-sf]:              https://user-images.githubusercontent.com/11538662/101629240-55a2da80-3a21-11eb-868b-67ee62b2af3d.png

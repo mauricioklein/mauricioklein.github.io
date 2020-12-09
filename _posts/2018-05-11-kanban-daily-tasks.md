@@ -100,5 +100,5 @@ The point is: no matter which tool you use (you can even use Jira, if you're mas
 Worth to give it a try ;)
 
 [trello]: https://trello.com/
-[mk-board]: {{site.url}}/assets/images/posts_images/trello-life-screenshot.png
+[mk-board]: https://user-images.githubusercontent.com/11538662/101626001-90eeda80-3a1c-11eb-9d7c-7876da629032.png
 [github-life-tasks]: https://dev.to/und0ck3d/organizing-your-life-using-github-6an

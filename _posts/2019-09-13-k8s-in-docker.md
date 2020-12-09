@@ -90,6 +90,6 @@ Kind is a very versatile tool for performing quick experiments with K8s or using
 [kops]:              https://github.com/kubernetes/kops
 [lab-repo]:          https://github.com/mauricioklein/kind-experiment
 
-[single-node]:     {{site.url}}/assets/images/posts_images/kind/single-node.png
-[single-node-run]: {{site.url}}/assets/images/posts_images/kind/single-node-run.png
-[ha-cluster]:      {{site.url}}/assets/images/posts_images/kind/ha-cluster.png
+[single-node]:     https://user-images.githubusercontent.com/11538662/101626318-107ca980-3a1d-11eb-9150-1a583fc45252.png
+[single-node-run]: https://user-images.githubusercontent.com/11538662/101626315-0fe41300-3a1d-11eb-9821-04da009fb654.png
+[ha-cluster]:      https://user-images.githubusercontent.com/11538662/101626306-0c508c00-3a1d-11eb-855b-851a4dda9ad6.png

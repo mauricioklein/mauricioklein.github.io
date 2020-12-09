@@ -70,8 +70,8 @@ To finish, Docker is just one of the available solutions. Many other approaches 
 > You have the weapon on your hand: just aim and pull the trigger.
 
 [zenvia]: http://www.zenvia.com.br/en/
-[find-you-kill-you]: {{site.url}}/assets/images/posts_images/find_you_kill_you.jpg
-[automate-all]: {{site.url}}/assets/images/posts_images/automate_all_the_things.jpg
+[find-you-kill-you]: https://user-images.githubusercontent.com/11538662/101624204-e70e4e80-3a19-11eb-9dab-6301db070e10.jpg
+[automate-all]: https://user-images.githubusercontent.com/11538662/101624196-e2e23100-3a19-11eb-9e2b-6e6e7e436500.jpg
 [jenkins]: https://jenkins-ci.org/
 [docker-client-github-search]: https://github.com/search?utf8=%E2%9C%93&q=docker+client
 [docker-komposer]: https://github.com/zenvia-mobile/docker-komposer

@@ -63,7 +63,7 @@ Some personal projects weren't achieved this year (weight loss, specially), but 
 
 So, I wish you all the best in 2016, and expect that the new year brings more and more good feelings, amazing people, great projects and everything that makes a happy programmer :)
 
-[jojo-photo]: {{site.url}}/assets/images/posts_images/jojo.jpg
-[vas-zenvia-photo]: {{site.url}}/assets/images/posts_images/vas-zenvia.jpg
-[elliot-photo]: {{site.url}}/assets/images/posts_images/elliot.jpg
-[i-will-be-back]: {{site.url}}/assets/images/posts_images/i-will-be-back.jpg
+[jojo-photo]: https://user-images.githubusercontent.com/11538662/101624663-8af7fa00-3a1a-11eb-983d-618902af8a34.jpg
+[vas-zenvia-photo]: https://user-images.githubusercontent.com/11538662/101624664-8af7fa00-3a1a-11eb-8fae-a326ce5bbaf0.jpg
+[elliot-photo]: https://user-images.githubusercontent.com/11538662/101624650-87647300-3a1a-11eb-9205-ce3ee76a1e23.jpg
+[i-will-be-back]: https://user-images.githubusercontent.com/11538662/101624662-8af7fa00-3a1a-11eb-9e83-8d1b0e8c05f9.jpg

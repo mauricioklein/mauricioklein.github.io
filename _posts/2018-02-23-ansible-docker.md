@@ -322,10 +322,10 @@ $ chmod 644 ~/.ssh/config
 [dehaan]: https://github.com/mpdehaan
 [code-repo]: https://github.com/mkleinio/ansible-docker
 
-[filesystem]: {{site.url}}/assets/images/posts_images/ansible-docker/filesystem.png
-[compose-run]: {{site.url}}/assets/images/posts_images/ansible-docker/compose-run.png
-[scale-servers]: {{site.url}}/assets/images/posts_images/ansible-docker/scale-servers.png
-[ansible-ping]: {{site.url}}/assets/images/posts_images/ansible-docker/ansible-ping.png
-[download-roles]: {{site.url}}/assets/images/posts_images/ansible-docker/download-roles.png
-[playbook-run]: {{site.url}}/assets/images/posts_images/ansible-docker/playbook-run.png
-[curl-check]: {{site.url}}/assets/images/posts_images/ansible-docker/curl-check.png
+[filesystem]: https://user-images.githubusercontent.com/11538662/101625590-e7a7e480-3a1b-11eb-82ef-43bdf81cf246.png
+[compose-run]: https://user-images.githubusercontent.com/11538662/101625579-e5458a80-3a1b-11eb-95fe-6bf6361eaa40.png
+[scale-servers]: https://user-images.githubusercontent.com/11538662/101625592-e8407b00-3a1b-11eb-8a80-2dd7f68538ac.png
+[ansible-ping]: https://user-images.githubusercontent.com/11538662/101625572-e37bc700-3a1b-11eb-8446-ecb03a5a89ee.png
+[download-roles]: https://user-images.githubusercontent.com/11538662/101625586-e676b780-3a1b-11eb-9987-2179241f8344.png
+[playbook-run]: https://user-images.githubusercontent.com/11538662/101625591-e7a7e480-3a1b-11eb-9017-4a0185c3d113.png
+[curl-check]: https://user-images.githubusercontent.com/11538662/101625581-e5de2100-3a1b-11eb-8d34-987f5ba0baf3.png
