@@ -1,0 +1,21 @@
+name: Daily Build
+
+on:
+  # Trigger build manually
+  workflow_dispatch:
+
+  # Runs every day at 3pm GMT (4pm CEST)
+  schedule:
+    - cron: '0 15 * * *'
+
+jobs:
+  trigger-pages-build:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Trigger GitHub pages rebuild
+        run: |
+          curl --fail --request POST \
+            --url https://api.github.com/repos/${{ github.repository }}/pages/builds \
+            --header "Authorization: Bearer $TOKEN"
+        env:
+          TOKEN: ${{ secrets.BUILD_TOKEN }}

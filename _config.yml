@@ -12,6 +12,10 @@ author: Mauricio Klein
 language: en
 date_format: '%B %o, %Y'
 
+# Disable building future posts
+# (posts will become available via the automated daily build)
+future: false
+
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com' and baseurl as '/child'
 url: https://mklein.io

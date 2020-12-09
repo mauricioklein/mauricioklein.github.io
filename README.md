@@ -1,4 +1,6 @@
-# Mauricio Klein's Blog
+![Daily Build](https://github.com/mauricioklein/mauricioklein.github.io/workflows/Daily%20Build/badge.svg)
+
+# [mklein.io](https://mklein.io)
 
 My personal blog, using [NexT theme][next-github].
 
