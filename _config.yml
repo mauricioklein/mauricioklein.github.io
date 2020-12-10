@@ -445,6 +445,9 @@ han: false
 # Google Analytics
 google_analytics: UA-63600025-1
 
+# Fathom Analytics
+fathom_analytics: LXDZJMBS
+
 # Yandex Webmaster tools verification setting
 # See: https://webmaster.yandex.ru/
 #yandex_site_verification:
