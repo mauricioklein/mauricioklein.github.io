@@ -10,7 +10,8 @@ console:
 		-v $(PROJECT_PATH):/app \
 		-p 4000:4000 \
 		--entrypoint /bin/sh \
-		-it blog
+		-it blog \
+		--incremental --future --drafts
 
 # Runs the blog in watch mode
 watch:
@@ -18,6 +19,7 @@ watch:
 	docker run --rm \
 		-v $(PROJECT_PATH):/app \
 		-p 4000:4000 \
-		-it blog --incremental --future
+		-it blog \
+		--incremental --future  --drafts
 
 .PHONY: image console watch
