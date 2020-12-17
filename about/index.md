@@ -34,5 +34,5 @@ you can reach me on [Github][github], [Twitter][twitter] or [Linkedin][linkedin]
 ---
 
 [github]: https://github.com/mauricioklein
-[twitter]: https://twitter.com/mkleinio
+[twitter]: https://twitter.com/{{ site.social_icons["Twitter"] }}
 [linkedin]: https://www.linkedin.com/in/mauricioklein
