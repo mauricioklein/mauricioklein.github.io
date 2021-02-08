@@ -4,9 +4,9 @@ on:
   # Trigger build manually
   workflow_dispatch:
 
-  # Runs every day at 3pm GMT (4pm CEST)
+  # Runs every day at 1pm GMT (2pm CEST)
   schedule:
-    - cron: '0 15 * * *'
+    - cron: '0 13 * * *'
 
 jobs:
   trigger-pages-build:
