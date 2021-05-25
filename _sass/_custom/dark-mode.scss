@@ -79,6 +79,11 @@ html.dark-mode {
     background-color: $bg-color;
   }
 
+  // Section divisor
+  hr {
+    background-color: black;
+  }
+
   // code highlight
   .highlight {
     background-color: $bg-color;
