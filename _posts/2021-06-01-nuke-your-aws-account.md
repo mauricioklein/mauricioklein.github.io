@@ -1,5 +1,5 @@
 ---
-title: "Nuke your AWS account, so it doesn't nuke your bank account"
+title: "Nuke your AWS account, not your bank account"
 excerpt: To be completed
 date: 2021-06-01
 categories:
@@ -19,7 +19,7 @@ Unlikely to happen?
 
 Well, it just happened to me some years ago, and I must say that I wasn't a complete beginner on AWS.
 
-> PUT MY BILL SCREENSHOT HERE
+![](https://user-images.githubusercontent.com/11538662/119470388-94ff8200-bd48-11eb-9035-521fef2ba806.png)
 
 AWS team was super comprehensive on my case and granted me credits to cover the bill, and checking online reports, this happened to some other folks as well. Still,
 this is an unpleasant situation and something you want to avoid at all costs.
@@ -43,13 +43,13 @@ on your AWS account, don't proceed (or at least proceed very carefully, so you k
 
 Our system will be implemented as follows:
 
-> PUT DIAGRAM IMAGE HERE
+![Architecture diagram](https://user-images.githubusercontent.com/11538662/119465513-04bf3e00-bd44-11eb-877b-cd96e924dc14.png)
 
 Everything starts with an AWS budget alarm. This alarm will be triggered when your spending surpass your specified threshold. EventBridge will be used to capture this alarm and trigger a CodeBuild project execution on response. CodeBuild, finally, will execute all the necessary steps to setup the environment, load your nuke configuration file (explained on the next chapter) and trigger aws-nuke, which will take care of deleting the resources in your AWS account.
 
 ## AWS Nuke
 
-[rebuy-de/aws-nuke](https://github.com/rebuy-de/aws-nuke) is an OSS project that (as the name suggests), nuke your AWS account. This tool works by reading a configuration file defined by you and triggers a delete on all the resources you decided to delete. 
+[rebuy-de/aws-nuke](https://github.com/rebuy-de/aws-nuke) is an OSS project that (as the name suggests), nuke your AWS account. This tool works by reading a configuration file defined by you and triggers a delete on all the resources you've allowed the tool to delete. _aws-nuke_ doesn't respect interdependency among services, it dispatches a delete request for all the resources sequentially. After that, a wait time is respect and nuke checks for the status of the deletion requests. Those who failed (e.g. because they're dependency of other services) are retried. The process remains until all the services are deleted or until there are only resources with errors left.
 
 [assume-role-console-setup]: https://user-images.githubusercontent.com/11538662/107290201-6cd46780-6a66-11eb-81d0-c045b5e988e5.png
 
