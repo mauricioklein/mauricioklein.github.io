@@ -24,10 +24,10 @@ function toggleDarkMode() {
 
 function updateDarkLabel() {
   if (getCookie("mode") === DARK_MODE) {
-    $(SELECTOR).text("🌙");
+    $(SELECTOR).text("☀️");
     $("html").addClass("dark-mode");
   } else {
-    $(SELECTOR).text("☀️");
+    $(SELECTOR).text("🌙");
     $("html").removeClass("dark-mode");
   }
 }
