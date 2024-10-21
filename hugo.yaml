@@ -1,0 +1,39 @@
+baseURL: 'https://mauricioklein.com/'
+title: 'Mauricio Klein | Notion & Automation Consultant'
+languageCode: en-us
+DefaultContentLanguage: en
+enableEmoji: true
+enableGitInfo: true
+enableRobotsTXT: true
+canonifyURLs: true
+paginate: 9
+enableInlineShortcodes: true
+
+params:
+  author:
+  author_image: /images/defaults/author.jpg
+  og_image: /images/defaults/featured_image.jpg
+  moto: "Streamline Your Digital Life"
+  description: "Simplify, Organize, and Automate with Expert Consulting"
+  google_analytics_id: '' # @NOTE: To remove the G2A tag, juste leave this key to an empty string.
+  cta:
+    text: Book a meeting
+    url: /contact
+  footer:
+    social_url: https://twitter.com/afrodudeonabike
+    social_username: '@afrodudeonabike'
+
+
+taxonomies:
+  category: Categories
+  tag: Tags
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+module:
+  hugoVersion:
+    extended: true
+    min: "0.110.0"
