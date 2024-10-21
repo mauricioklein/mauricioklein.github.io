@@ -1,0 +1,21 @@
+baseURL: https://cshugo.mansoorbarri.com
+languageCode: en-us
+theme: coming-soon
+params:
+  title: MauricioKlein.com
+  description: ""
+  favicon: ""
+  message: Coming Soon!
+  release: ""
+  background: ""
+  socialIcons:
+    - name: email
+      url: contact@mauricioklein.com
+    - name: facebook
+      url: https://www.facebook.com/mk.consulting/
+    - name: instagram
+      url: https://www.instagram.com/mklein.consulting
+    - name: tiktok
+      url: https://www.tiktok.com/@mklein.consulting
+    - name: linkedin
+      url: https://www.linkedin.com/company/104861855
