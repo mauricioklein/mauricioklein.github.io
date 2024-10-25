@@ -9,8 +9,8 @@ params:
   release: ""
   background: ""
   socialIcons:
-    - name: email
-      url: contact@mauricioklein.com
+    # - name: email
+    #   url: contact@mauricioklein.com
     - name: facebook
       url: https://www.facebook.com/mk.consulting/
     - name: instagram
